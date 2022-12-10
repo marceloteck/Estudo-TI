@@ -42,7 +42,7 @@ define("URL_COMPLETA", Url('UrlAtual'));
 define("URL_UTIMA", dividirUrl("/", 1, URL_COMPLETA));
 define("URL_UTIMA_get", dividirUrl("?url=", 1, URL_COMPLETA));
 
-inicio();
+
 
 
 
