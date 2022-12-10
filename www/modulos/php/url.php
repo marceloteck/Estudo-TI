@@ -28,7 +28,7 @@ function dividirUrl($busca, $valor, $url){
 
 function inicio(){
 	if(URL_UTIMA == ""){
-	//header("location:/index");
+	header("location:/index");
 	include "www/inicio.php";
 	}else if(URL_UTIMA == "index" ){
 	include "inicio.php";
@@ -43,7 +43,7 @@ define("URL_UTIMA", dividirUrl("/", 1, URL_COMPLETA));
 define("URL_UTIMA_get", dividirUrl("?url=", 1, URL_COMPLETA));
 
 inicio();
-echo "final site";
+
 
 
 
