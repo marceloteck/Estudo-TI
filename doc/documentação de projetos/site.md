@@ -29,3 +29,9 @@ somente arquivos e pastas principais do site
    * --- index.php
    * --- inicio.php
 *  --- index.php
+
+
+***
+
+# Documentação
+
