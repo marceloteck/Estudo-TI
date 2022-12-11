@@ -1,15 +1,15 @@
 <?php
 function buscarPastaIndex(){
-    $path = "doc/";
+    $path = "../doc/CURSOS/";
 	$diretorio = dir($path);
 
-	while($arquivo = $diretorio -> read()){
-	if ($arquivo != '.' && $arquivo != '..'){
-		$arquivof = ucfirst($arquivo);
-            return $arquivof.'<br/>';
+		while($arquivo = $diretorio -> read()){
+		if ($arquivo != '.' && $arquivo != '..' && $arquivo != 'documentação de projetos' && $arquivo != 'sobre as pastas.txt'){
+			$arquivof .= $arquivo.'<br/>';
+		}
 	}
-	}
-	$diretorio -> close();	
+	$diretorio -> close();
+	return $arquivof;
 }
 
 ?>
