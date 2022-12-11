@@ -1,5 +1,6 @@
 <?php
 require_once 'conf.php';
+require_once 'variaveis.php';
 function Url($valor){
 	if (empty($_SERVER['HTTPS'])){
 		$serverhttp = "http://";
@@ -41,6 +42,11 @@ define("URL_PAGINAS", Url('uri'));
 define("URL_COMPLETA", Url('UrlAtual'));
 define("URL_UTIMA", dividirUrl("/", 1, URL_COMPLETA));
 define("URL_UTIMA_get", dividirUrl("?url=", 1, URL_COMPLETA));
+define("TITULO_DOSITE", titleWeb('titleSite'));
+define("GETBOOTSTRAP", titleWeb('getbootstrap'));
+define("NAMESITE", titleWeb('NameSite'));
+
+
 
 
 
