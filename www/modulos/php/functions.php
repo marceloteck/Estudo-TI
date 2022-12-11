@@ -5,7 +5,8 @@ function buscarPastaIndex(){
 
 		while($arquivo = $diretorio -> read()){
 		if ($arquivo != '.' && $arquivo != '..' && $arquivo != 'documentação de projetos' && $arquivo != 'sobre as pastas.txt'){
-			$arquivof .= $arquivo.'<br/>';
+			$arquivof .= "<option value='$arquivo'>$arquivo</option>";
+		
 		}
 	}
 	$diretorio -> close();

@@ -21,8 +21,9 @@
           divtab.classList.toggle("active");
         }
       }
+    CKEDITOR.replace( 'editor1' );
 
-      // Replace the <textarea id="editor1"> with a CKEditor 4
-                // instance, using default configuration.
-                CKEDITOR.replace( 'editor1' );
+    // In your Javascript (external .js resource or <script> tag)
+
+
       </script>

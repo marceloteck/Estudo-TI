@@ -1,30 +1,29 @@
 <div class='container'>
-	<h2> Editar a letra </h2>
-
 <br />
-	
+<script>
+	$(document).ready(function() {
+		$('#PastaOption').select2();
+	});
+</script>
 			<form  method="post" action="#">
 				 <div class="form-group">
 				    <button type="submit"  style="width:100%;" name="button2" class="btn btn-dark">Enviar</button>
 					<br /><br />
-					<label for="inputState" class="form-label">Qual a missa?</label>
-					<select name="pastaativa" id="inputState" class="form-select">
-						  <option select value="<?=PASTA_ATUAL?>"> <?=PASTA_FINAL_VISTA?> (ATUAL) </option>
-						   <?=PASTA_DIRETORIO?>
+					<label for="inputState" class="form-label">Onde Salvar</label>
+					<select name="pastaativa" id="PastaOption" class="form-select">
+						 <?=PASTAS_ESTUDOS?>
 						  </select>
 						<br />
-					<input name="title"  type="text" value="<?=TITULO_FINAL_VISTO?>" class="form-control" placeholder="TITULO">
+					<input name="title"  type="text" class="form-control" placeholder="TITULO">
 					
-					<input name="link"  type="hidden" value="<?=LINK_PARA_TITULO?>" class="form-control" placeholder="LINK DO TITULO">
+					<input name="link"  type="hidden" class="form-control" placeholder="LINK DO ARQUIVO">
 					<br />
-					<textarea name="editor1" id="editor1" width="100%"><?php echo TEXTO_FINAL_EDITAR; ?></textarea>
+					<textarea name="editor1" id="editor1" width="100%"></textarea>
 				</div>
 			</form>
 
 		
-	
+
 
 
 </div>
-
-     
