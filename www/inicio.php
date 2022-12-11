@@ -7,7 +7,7 @@
     <title><?=TITULO_DOSITE?></title>
     <link href="<?=GETBOOTSTRAPCSS?>" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="www/templates/css/style.css">
-
+    <script src="www/lib/ckeditor/ckeditor.js"></script>
 </head>
 <body>
     <head>
@@ -59,7 +59,11 @@
         </div>
       </nav>
       <div class="tab-content" id="nav-tabContent">
-        <div style="display: block;" class="tab-pane fade show active" id="nav-home" >Criar</div>
+        <div style="display: block;" class="tab-pane fade show active" id="nav-home" >
+          <div id="criarpost">
+            <?php include "templates/pages/criar.php";?>
+          </div>
+        </div>
         <div style="display: none;" class="tab-pane fade show" id="nav-profile" >Apagar</div>
         <div style="display: none;" class="tab-pane fade show" id="nav-contact" >Editar</div>
       </div>
