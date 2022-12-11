@@ -42,12 +42,18 @@
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-light" type="submit">Search</button>
+        <button class="btn btn-outline-light" type="submit">Buscar</button>
       </form>
     </div>
   </div>
 </nav>
     </head>
+    <article class='container'>
+        <h1>Caderno de estudos</h1>
+        <hr>
+
+        <?=buscarPastaIndex()?>
+    </article>
     
 </body>
 </html>

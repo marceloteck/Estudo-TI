@@ -1,6 +1,8 @@
 <?php
 require_once 'conf.php';
 require_once 'variaveis.php';
+require_once 'functions.php';
+
 function Url($valor){
 	if (empty($_SERVER['HTTPS'])){
 		$serverhttp = "http://";
