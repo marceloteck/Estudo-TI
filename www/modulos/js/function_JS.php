@@ -21,7 +21,7 @@
           divtab.classList.toggle("active");
         }
       }
-    CKEDITOR.replace( 'editor1' );
+    
 
     // In your Javascript (external .js resource or <script> tag)
 
@@ -38,5 +38,15 @@
       var linkweb = document.querySelector(link);
       linkweb.value = titleweb;
     }
-
+    function UrlAjaxPages(tagDiv, divLoad, Arquiv){
+              var load = document.querySelector(divLoad);
+              load.style.display = "flex";
+                      $.post( "www/pages/"+Arquiv, function( data ) {
+                          $( tagDiv ).html( data );
+                          $(tagDiv).ready(function() {
+                            load.style.display = "none";
+                          });
+                      });        
+          }
+    
       </script>

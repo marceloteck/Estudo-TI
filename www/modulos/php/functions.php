@@ -1,12 +1,19 @@
 <?php
-function buscarPastaIndex(){
+function buscarPastaIndex($valor){
     $path = "../doc/CURSOS/";
 	$diretorio = dir($path);
 
 		while($arquivo = $diretorio -> read()){
 		if ($arquivo != '.' && $arquivo != '..' && $arquivo != 'documentação de projetos' && $arquivo != 'sobre as pastas.txt'){
-			$arquivof .= "<option value='$arquivo'>$arquivo</option>";
-		
+
+			switch ($valor) {
+				case 'option':
+					$arquivof .= "<option value='$arquivo'>$arquivo</option>";
+					break;
+				case 'simples':
+					$arquivof .= '|'.$arquivo;
+					break;
+			}
 		}
 	}
 	$diretorio -> close();
@@ -25,5 +32,16 @@ function buscarArquivodaPasta($valor){
 	return $arquivof;
 }
 
+function GetNavtab($valor)
+{
+	
+	switch ($valor) {
+		case 'pastaestudo':
+			return '?pasta='.buscarPastaIndex('simples');
+			break;
+
+	}
+}
+define('GETNAVTAB', GetNavtab('pastaestudo'));
 
 ?>

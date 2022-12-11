@@ -58,26 +58,32 @@
         <hr>
         <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-          <a onclick="Navtab('#nav-home','#nav-profile', '#nav-contact')" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"  role="tab" href="#" aria-controls="nav-home" aria-selected="true">Criar</a>
-          <a onclick="Navtab('#nav-profile','#nav-contact','#nav-home')" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#" role="tab" aria-controls="nav-profile" aria-selected="false">Apagar</a>
-          <a onclick="Navtab('#nav-contact','#nav-home', '#nav-profile')"class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#" role="tab" aria-controls="nav-contact" aria-selected="false">Editar</a>
+
+          <a onclick="Navtab('#nav-home','#nav-profile', '#nav-contact'),UrlAjaxPages('#criarpost','#load1','criar.php<?=GETNAVTAB?>')" class="nav-item nav-link " id="nav-home-tab" data-toggle="tab"  role="tab" href="#" aria-controls="nav-home" aria-selected="true">Criar</a>
+
+          <a onclick="Navtab('#nav-profile','#nav-contact','#nav-home'),UrlAjaxPages('#apagarpost','#load1','apagar.php')" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#" role="tab" aria-controls="nav-profile" aria-selected="false">Apagar</a>
+
+          <a onclick="Navtab('#nav-contact','#nav-home', '#nav-profile'),UrlAjaxPages('#editarpost','#load1','editar.php')"class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#" role="tab" aria-controls="nav-contact" aria-selected="false">Editar</a>
+
         </div>
       </nav>
 
-      <div class="carregamento">
+      <div class="carregamento" id="load1">
         <div class="square"></div>
       </div>
       
 
 
       <div class="tab-content" id="nav-tabContent">
-        <div style="display: block;" class="tab-pane fade show" id="nav-home" >
-          <div id="criarpost">
-            <?php include "pages/criar.php";?>
-          </div>
+        <div style="display: none;" class="tab-pane fade show" id="nav-home" >
+          <div id="criarpost"></div>
         </div>
-        <div style="display: none;" class="tab-pane fade show" id="nav-profile" >Apagar</div>
-        <div style="display: none;" class="tab-pane fade show" id="nav-contact" >Editar</div>
+        <div style="display: none;" class="tab-pane fade show" id="nav-profile" >
+          <div id="apagarpost"></div> 
+        </div>
+        <div style="display: none;" class="tab-pane fade show" id="nav-contact" >
+        <div id="editarpost"></div>   
+      </div>
       </div>
 
 

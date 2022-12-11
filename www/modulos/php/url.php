@@ -48,7 +48,7 @@ define("TITULO_DOSITE", titleWeb('titleSite'));
 define("GETBOOTSTRAPCSS", titleWeb('getbootstrapCss'));
 define("GETBOOTSTRAPJS", titleWeb('getbootstrapjS'));
 define("NAMESITE", titleWeb('NameSite'));
-define("PASTAS_ESTUDOS", buscarPastaIndex());
+define("PASTAS_ESTUDOS", buscarPastaIndex('option'));
 
 
 ?>
