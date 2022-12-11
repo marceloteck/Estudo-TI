@@ -25,5 +25,18 @@
 
     // In your Javascript (external .js resource or <script> tag)
 
+    function removerAcentos(s) {
+      return s.normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .replace(/[- ]+/g, "-");
+    }
+
+    function titleLink(title, link){
+      var titleweb = document.querySelector(title).value;
+      titleweb = removerAcentos(titleweb);
+      var linkweb = document.querySelector(link);
+      linkweb.value = titleweb;
+    }
 
       </script>

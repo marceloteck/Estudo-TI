@@ -14,9 +14,9 @@
 						 <?=PASTAS_ESTUDOS?>
 						  </select>
 						<br />
-					<input name="title"  type="text" class="form-control" placeholder="TITULO">
+					<input onkeyup="titleLink('#title1','#Link1')" name="title"  type="text" id="title1" class="form-control" placeholder="TITULO">
 					
-					<input name="link"  type="hidden" class="form-control" placeholder="LINK DO ARQUIVO">
+					<input id="Link1" name="link"  type="text" class="form-control" placeholder="LINK DO ARQUIVO">
 					<br />
 					<textarea name="editor1" id="editor1" width="100%"></textarea>
 				</div>

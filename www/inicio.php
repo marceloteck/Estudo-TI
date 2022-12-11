@@ -8,9 +8,10 @@
     <link href="<?=GETBOOTSTRAPCSS?>" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="www/templates/css/style.css">
     <script src="www/lib/ckeditor/ckeditor.js"></script>
-    
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+
 
 </head>
 <body>
@@ -62,15 +63,25 @@
           <a onclick="Navtab('#nav-contact','#nav-home', '#nav-profile')"class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#" role="tab" aria-controls="nav-contact" aria-selected="false">Editar</a>
         </div>
       </nav>
+
+      <div class="carregamento">
+        <div class="square"></div>
+      </div>
+      
+
+
       <div class="tab-content" id="nav-tabContent">
-        <div style="display: block;" class="tab-pane fade show active" id="nav-home" >
+        <div style="display: block;" class="tab-pane fade show" id="nav-home" >
           <div id="criarpost">
-            <?php include "templates/pages/criar.php";?>
+            <?php include "pages/criar.php";?>
           </div>
         </div>
         <div style="display: none;" class="tab-pane fade show" id="nav-profile" >Apagar</div>
         <div style="display: none;" class="tab-pane fade show" id="nav-contact" >Editar</div>
       </div>
+
+
+
     </article>
   <?php
   include "modulos/js/function_JS.php";
