@@ -45,18 +45,9 @@ define("URL_COMPLETA", Url('UrlAtual'));
 define("URL_UTIMA", dividirUrl("/", 1, URL_COMPLETA));
 define("URL_UTIMA_get", dividirUrl("?url=", 1, URL_COMPLETA));
 define("TITULO_DOSITE", titleWeb('titleSite'));
-define("GETBOOTSTRAP", titleWeb('getbootstrap'));
+define("GETBOOTSTRAPCSS", titleWeb('getbootstrapCss'));
+define("GETBOOTSTRAPJS", titleWeb('getbootstrapjS'));
 define("NAMESITE", titleWeb('NameSite'));
-
-
-
-
-
-
-
-
-
-
 
 
 ?>

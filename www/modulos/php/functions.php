@@ -11,5 +11,18 @@ function buscarPastaIndex(){
 	$diretorio -> close();
 	return $arquivof;
 }
+function buscarArquivodaPasta($valor){
+   $path = "../doc/CURSOS/".$valor.'/';
+	$diretorio = dir($path);
+
+		while($arquivo = $diretorio -> read()){
+		if ($arquivo != '.' && $arquivo != '..'){
+			$arquivof .= $arquivo.'<br/>';
+		}
+	}
+	$diretorio -> close();
+	return $arquivof;
+}
+
 
 ?>
