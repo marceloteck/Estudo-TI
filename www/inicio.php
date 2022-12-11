@@ -51,12 +51,6 @@
     <article class='container'>
         <h1>Caderno de estudos</h1>
         <hr>
-
-        <?php
-        buscarArquivodaPasta('CSS 3');
-        //buscarPastaIndex();
-        
-        ?>
         <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
           <a onclick="Navtab('#nav-home','#nav-profile', '#nav-contact')" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"  role="tab" href="#" aria-controls="nav-home" aria-selected="true">Criar</a>
@@ -69,21 +63,10 @@
         <div style="display: none;" class="tab-pane fade show" id="nav-profile" >Apagar</div>
         <div style="display: none;" class="tab-pane fade show" id="nav-contact" >Editar</div>
       </div>
-
-
-
-
     </article>
-    
-    
-
-
-
   <?php
   include "modulos/js/function_JS.php";
   ?>
-
     <script src="<?=GETBOOTSTRAPJS?>" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
 </body>
 </html>
