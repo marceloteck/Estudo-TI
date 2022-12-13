@@ -30,10 +30,15 @@ function dividirUrl($busca, $valor, $url){
 }
 
 function inicio(){
+	$url = explode('?', URL_COMPLETA);
+	$url = explode(URL_PRINCIPAL, $url[0]);
+	$url = explode('&', $url[1]);
+	$url = str_replace('/', '', $url[0]);
+
 	if(URL_UTIMA == ""){
 	header("location:/index");
 	include "www/inicio.php";
-	}else if(URL_UTIMA == "index" ){
+	}else if($url == "index" ){
 	include "inicio.php";
 	}else{
 	echo "erro 404";
