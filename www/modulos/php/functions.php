@@ -1,5 +1,8 @@
 <?php
-/*function buscarPastaIndex($valor){
+#region salvar 1
+/*
+//caso der problema usar esse código pra liberar o erro 
+function buscarPastaIndex($valor){
     //$path = "../doc/CURSOS";
 	$diretorio = /*dir($path)'';
 
@@ -19,6 +22,7 @@
 	//$diretorio -> close();
 	return $arquivof;
 }*/
+#endregion fimsalvar
 
 function buscarPastaIndex($valor){
     $path = "../doc/CURSOS";

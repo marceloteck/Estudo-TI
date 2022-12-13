@@ -40,11 +40,11 @@
         <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
 
-          <a onclick="Navtab('#nav-home','#nav-profile', '#nav-contact'),UrlAjaxPages('#criarpost','#load1','criar.php<?=GETNAVTAB?>')" class="nav-item nav-link " id="nav-home-tab" data-toggle="tab"  role="tab" href="#" aria-controls="nav-home" aria-selected="true">Criar</a>
+          <a onclick="Navtab('#nav-home','#nav-profile', '#nav-contact'),UrlAjaxPages('#criarpost','#load1','criar.php<?=GETNAVTAB?>')" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"  role="tab" href="#" aria-controls="nav-home" aria-selected="true">Criar</a>
 
           <a onclick="Navtab('#nav-profile','#nav-contact','#nav-home'),UrlAjaxPages('#apagarpost','#load1','apagar.php')" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#" role="tab" aria-controls="nav-profile" aria-selected="false">Apagar</a>
 
-          <a onclick="Navtab('#nav-contact','#nav-home', '#nav-profile'),UrlAjaxPages('#editarpost','#load1','editar.php')"class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#" role="tab" aria-controls="nav-contact" aria-selected="false">Editar</a>
+          <a onclick="Navtab('#nav-contact','#nav-home', '#nav-profile'),UrlAjaxPages('#editarpost','#load1','editar.php<?=GETNAVTAB?>')"class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#" role="tab" aria-controls="nav-contact" aria-selected="false">Editar</a>
 
         </div>
       </nav>
@@ -56,7 +56,7 @@
 <?php require_once "modulos/php/Pages_gravarPost.php";?>
 
       <div class="tab-content" id="nav-tabContent">
-        <div style="display: none;" class="tab-pane fade show" id="nav-home" >
+        <div style="display: block;" class="tab-pane fade show" id="nav-home" >
           <div id="criarpost"></div>
         </div>
         <div style="display: none;" class="tab-pane fade show" id="nav-profile" >
@@ -74,5 +74,6 @@
   include "modulos/js/function_JS.php";
   ?>
     <script src="<?=GETBOOTSTRAPJS?>" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+   <script>UrlAjaxPages('#criarpost','#load1','criar.php<?=GETNAVTAB?>');</script> 
 </body>
 </html>
