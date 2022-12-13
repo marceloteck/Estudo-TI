@@ -23,7 +23,6 @@
       }
     
 
-    // In your Javascript (external .js resource or <script> tag)
 
     function removerAcentos(s) {
       return s.normalize('NFD')
@@ -38,6 +37,61 @@
       var linkweb = document.querySelector(link);
       linkweb.value = titleweb;
     }
+
+    
+          function UrlAjaxPages(tagDiv, divLoad, Arquiv){
+              var load = document.querySelector(divLoad);
+              load.style.display = "flex";
+              $.ajax({
+            url: "www/pages/"+Arquiv,
+            type:'POST',
+            cache:false,
+            contentType:false,
+            processData:false,
+            success:function(data){
+                $(tagDiv).html(data);
+                load.style.display = "none";
+
+            },
+            dataType:'html'
+        });
+                             
+          }
+
+
+
+
+
+
+
+/*
+GUARDAR CÓDIGOS ###
+
+$(function(){
+
+    $('#favoritar').submit(function(event){
+        event.preventDefault();
+        var formDados = new FormData($(this)[0]);
+
+        $.ajax({
+            url:'http://localhost:83/www/modulos/php/Pages_gravarPost.php',
+            type:'POST',
+            data:formDados,
+            cache:false,
+            contentType:false,
+            processData:false,
+            success:function(data){
+                $('#resultado').html(data);
+                //alert('Favoritado Com Sucesso!');
+
+            },
+            dataType:'html'
+        });
+        return false;
+    });
+});
+
+
     function UrlAjaxPages(tagDiv, divLoad, Arquiv){
               var load = document.querySelector(divLoad);
               load.style.display = "flex";
@@ -47,6 +101,6 @@
                             load.style.display = "none";
                           });
                       });        
-          }
-    
+          }*/
+
       </script>

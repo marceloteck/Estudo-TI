@@ -53,7 +53,7 @@
         <div class="square"></div>
       </div>
       
-
+<?php require_once "modulos/php/Pages_gravarPost.php";?>
 
       <div class="tab-content" id="nav-tabContent">
         <div style="display: none;" class="tab-pane fade show" id="nav-home" >
