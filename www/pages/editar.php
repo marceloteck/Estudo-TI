@@ -57,7 +57,7 @@ $path = "../../doc/cursos/";
 				$arf = str_replace("-", " ", $arf);
 				$arf = ucfirst($arf);
 						echo '<tr>
-								  <td><a href="#">'.$arf.'</a></td>
+								  <td><a href="#?url='.$path1.'/'.$arf.'">'.$arf.'</a></td>
 							 </tr>';		
 				}
 			}			
