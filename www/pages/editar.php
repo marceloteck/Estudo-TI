@@ -6,9 +6,11 @@ require_once "../modulos/php/PagesPhp.php";
 <div class='container'>
 
 
+
+
+
+<!--
 <div id="resultado"></div>
-
-
 <br />
 
 			<form id="favoritar" action="#"  method="post"  >
@@ -28,5 +30,10 @@ require_once "../modulos/php/PagesPhp.php";
 					<textarea name="editor" id="editor1" width="100%"></textarea>
 				</div>
 			</form>
+-->
+
+
+
+
 </div>
 <script>CKEDITOR.replace( 'editor1' );</script>

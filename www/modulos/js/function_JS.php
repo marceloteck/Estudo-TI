@@ -41,7 +41,7 @@
     
           function UrlAjaxPages(tagDiv, divLoad, Arquiv){
               var load = document.querySelector(divLoad);
-              load.style.display = "flex";
+             // load.style.display = "flex";
               $.ajax({
             url: "www/pages/"+Arquiv,
             type:'POST',

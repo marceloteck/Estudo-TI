@@ -4,7 +4,8 @@
 //caso der problema usar esse código pra liberar o erro 
 function buscarPastaIndex($valor){
     //$path = "../doc/CURSOS";
-	$diretorio = /*dir($path)'';
+	//$diretorio = dir($path)'';
+	$diretorio = '';
 
 		//while($arquivo = $diretorio -> read()){
 		if ($arquivo != '.' && $arquivo != '..' && $arquivo != 'documentação de projetos' && $arquivo != 'sobre as pastas.txt'){
@@ -21,8 +22,9 @@ function buscarPastaIndex($valor){
 	//}
 	//$diretorio -> close();
 	return $arquivof;
-}*/
+}
 #endregion fimsalvar
+*/
 
 function buscarPastaIndex($valor){
     $path = "../doc/CURSOS";
@@ -44,6 +46,8 @@ function buscarPastaIndex($valor){
 	$diretorio -> close();
 	return $arquivof;
 }
+
+
 function buscarArquivodaPasta($valor){
    $path = "../doc/CURSOS/".$valor.'/';
 	$diretorio = dir($path);
