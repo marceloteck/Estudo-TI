@@ -40,7 +40,7 @@
         <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
 
-          <a onclick="Navtab('#nav-home','#nav-profile', '#nav-contact'),UrlAjaxPages('#criarpost','#load1','criar.php<?=GETNAVTAB?>')" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"  role="tab" href="#" aria-controls="nav-home" aria-selected="true">Criar</a>
+          <a onclick="Navtab('#nav-home','#nav-profile', '#nav-contact'),UrlAjaxPages('#criarpost','#load1','criar.php<?=GETNAVTAB?>')" class="nav-item nav-link" id="nav-home-tab" data-toggle="tab"  role="tab" href="#" aria-controls="nav-home" aria-selected="true">Criar</a>
 
           <a onclick="Navtab('#nav-profile','#nav-contact','#nav-home'),UrlAjaxPages('#apagarpost','#load1','apagar.php')" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#" role="tab" aria-controls="nav-profile" aria-selected="false">Apagar</a>
 
@@ -56,7 +56,7 @@
 <?php require_once "modulos/php/Pages_gravarPost.php";?>
 
       <div class="tab-content" id="nav-tabContent">
-        <div style="display: block;" class="tab-pane fade show" id="nav-home" >
+        <div style="display: none;" class="tab-pane fade show" id="nav-home" >
           <div id="criarpost"></div>
         </div>
         <div style="display: none;" class="tab-pane fade show" id="nav-profile" >
