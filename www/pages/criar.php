@@ -1,6 +1,6 @@
 <?php
-require_once "../modulos/php/PagesPhp.php";
-//require_once "../modulos/php/Pages_gravarPost.php";
+require_once "modulos/php/PagesPhp.php";
+require_once "modulos/php/Pages_gravarPost.php";
 ?>
 
 <div class='container'>

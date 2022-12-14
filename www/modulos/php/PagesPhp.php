@@ -1,6 +1,6 @@
 <?php
-if(isset($_GET['pasta'])){
-	$GetPast = $_GET['pasta'];
+if(GETNAVTAB != ""){
+	$GetPast = GETNAVTAB;
 	$GetPst  = explode('|', $GetPast);
 	$coutPst = count($GetPst);
 	
