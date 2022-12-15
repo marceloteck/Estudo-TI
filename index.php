@@ -1,6 +1,15 @@
 <?php
-/*require_once 'www/modulos/php/url.php';
-inicio();*/
-?>
+//URL
+require_once "Assets/php/url.php";
+//DEFINE
+include "Assets/php/define";
+//PAGINA ATUAL
 
-AQUI
+//Inicio
+include "Pages/inicio.php";
+
+
+
+//login
+//include "Pages/login.php";
+?>
