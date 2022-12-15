@@ -29,6 +29,7 @@ function dividirUrl($busca, $valor, $url){
 	return $final_url;
 }
 
+
 function inicio(){
 	$url = explode('?', URL_COMPLETA);
 	$url = explode(URL_PRINCIPAL, $url[0]);
@@ -36,6 +37,7 @@ function inicio(){
 	$url = str_replace('/', '', $url[0]);
 
 	if(URL_UTIMA == ""){
+	
 	header("location:/index");
 	include "www/inicio.php";
 	}else if($url == "index" ){
@@ -54,6 +56,8 @@ define("GETBOOTSTRAPCSS", titleWeb('getbootstrapCss'));
 define("GETBOOTSTRAPJS", titleWeb('getbootstrapjS'));
 define("NAMESITE", titleWeb('NameSite'));
 define("PASTAS_ESTUDOS", buscarPastaIndex('option'));
+
+
 
 
 ?>
