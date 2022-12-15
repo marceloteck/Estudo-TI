@@ -2,18 +2,47 @@
 //URL
 require_once "Assets/php/url.php";
 //DEFINE
-include "Assets/php/define";
+include "Assets/php/define.php";
 //PAGINA ATUAL
 
-//Inicio
-include "Pages/inicio.php";
+include "include/include.php";
 
 
 
-//login
-//include "Pages/login.php";
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
