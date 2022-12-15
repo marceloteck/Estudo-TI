@@ -19,8 +19,12 @@ define('TOP_INCLD', 'include/top.php');
 define('METATAGS_INCLD', 'include/meta_tags.php');
 define('HEADER_INCLD', 'include/header.php');
 define('JSRODAPE_INCLD', 'include/js_rodape.php');
-define('CSS_INCLD', 'include/link_Css.php');
+define('RODAPE_INCLD', 'include/rodape.php');
+define('CSS_INCLD', 'include/links_Css.php');
 define('MENU_INCLD', 'include/menu.php');
+define('MENU_INICIO_INCLD', 'include/menu_inicio.php');
+define('TOPBAR_INCLD', 'include/TopBar.php');
+
 
 //PAGES
 define('INICIO_PAGES', 'Pages/inicio.php');
