@@ -28,7 +28,9 @@ define('TOPBAR_INCLD', 'include/TopBar.php');
 
 //PAGES
 define('INICIO_PAGES', 'Pages/inicio.php');
+define('CRIAR_PAGES', 'Pages/criar.php');
 define('LOGIN_PAGES', 'Pages/login.php');
+
 
 
 ?>
