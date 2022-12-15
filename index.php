@@ -1,4 +1,6 @@
 <?php
-require_once 'www/modulos/php/url.php';
-inicio();
+/*require_once 'www/modulos/php/url.php';
+inicio();*/
 ?>
+
+AQUI
