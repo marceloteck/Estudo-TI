@@ -8,6 +8,8 @@ include "Assets/php/define.php";
 //gerenciador de páginas a serem exibidas
 include "include/include.php";
 
+//include "pages/login.php";
+
 
 
 
