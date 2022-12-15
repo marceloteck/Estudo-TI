@@ -51,4 +51,28 @@ function inicio(){
 
 
 
+/*********************** */
+function limitChars($text, $limit)
+{
+ $join = array();
+ $ArrayString = explode(" ", $text);
+
+    if ($limit > count($ArrayString)) {
+        $limit = count($ArrayString) / 2;   
+    }
+
+    foreach ($ArrayString as $key => $word) {
+              $join[] = $word;
+           if ($key == $limit) {
+               break;
+         }
+    }
+    //print_r($join);
+    return implode(" ", $join)."...";
+
+}
+
+
+
+
 ?>

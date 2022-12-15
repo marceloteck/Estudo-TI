@@ -24,13 +24,13 @@
     <link href="<?=URL_PRINCIPAL?>/Assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <style>
-    .DivConteudo{
+    .DivConteudo a{
         overflow: auto;
-    overflow-y: auto;
-    margin-right: 15px;
-    position:relative;
-    background-color: #000;
     }
+
+    .DivConteudo a::-webkit-scrollbar { 
+	display: none;
+}
 
     </style>
 
@@ -96,12 +96,12 @@
                     <i class="fas fa-fw fa-bars"></i>
                     <span>Conteudo de estudos</span>
                 </a>
-                <div id="collapseTree" class="collapse show" aria-labelledby="headingTree" data-parent="#accordionSidebar">
+                <div id="collapseTree" class="collapse show tooltip-demo" aria-labelledby="headingTree" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded DivConteudo">
                         <h4 class="collapse-header">CSS 3:</h4>
                         <?php
                         for ($i = 1; $i <= 10; $i++){
-                            echo '<a class="collapse-item" href="/">inicio de como criar uma pagina css '.$i.'</a>';
+                            echo '<a  data-toggle="tooltip" data-placement="top" title="inicio de como criar uma pagina css '.$i.'" class="collapse-item" href="/">'.limitChars('inicio de como criar uma pagina css '.$i.'', 4).'</a>';
                         }
                         ?>
                     </div>
@@ -123,17 +123,17 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Heading -->
+            <!-- Heading 
             <div class="sidebar-heading">
                 Addons
-            </div>
+            </div> -->
 
         
 
 
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+            <!-- Divider 
+            <hr class="sidebar-divider d-none d-md-block">-->
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -362,6 +362,7 @@
 
     <!-- Bootstrap core JavaScript-->
     <script src="<?=URL_PRINCIPAL?>/Assets/vendor/jquery/jquery.min.js"></script>
+      
     <script src="<?=URL_PRINCIPAL?>/Assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
@@ -376,6 +377,17 @@
 
     <!-- Page level custom scripts -->
     <script src="<?=URL_PRINCIPAL?>/Assets/js/demo/datatables-demo.js"></script>
+
+
+     <!-- popper -->                   
+    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="https://getbootstrap.com/docs/4.0/assets/js/docs.min.js"></script>
+
+    <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+                     
+
 
 </body>
 
