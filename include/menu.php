@@ -44,11 +44,9 @@
         </div>
     </div>
 </li>
-
 <?php
-include MENU_INICIO_INCLD; // menu da página inicial
+include MENU_ATUAL; 
 ?>
-
 <!-- Divider -->
 <hr class="sidebar-divider">
 <!-- Sidebar Toggler (Sidebar) -->

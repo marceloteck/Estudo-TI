@@ -23,13 +23,19 @@ define('RODAPE_INCLD', 'include/rodape.php');
 define('CSS_INCLD', 'include/links_Css.php');
 define('MENU_INCLD', 'include/menu.php');
 define('MENU_INICIO_INCLD', 'include/menu_inicio.php');
+define('MENU_CRIAR_INCLD', 'include/menu_criar.php');
+define('MENU_EDITAR_INCLD', 'include/menu_editar.php');
 define('TOPBAR_INCLD', 'include/TopBar.php');
+
 
 
 //PAGES
 define('INICIO_PAGES', 'Pages/inicio.php');
 define('CRIAR_PAGES', 'Pages/criar.php');
+define('EDITAR_PAGES', 'Pages/editar.php');
+define('APAGAR_PAGES', 'Pages/apagar.php');
 define('LOGIN_PAGES', 'Pages/login.php');
+define('ERROR404', 'Pages/404');
 
 
 

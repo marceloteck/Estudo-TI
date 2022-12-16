@@ -9,3 +9,5 @@
 
     <!-- Custom styles for this page -->
     <link href="<?=URL_PRINCIPAL?>/Assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <script src="Assets/lib/ckeditor/ckeditor.js"></script>
