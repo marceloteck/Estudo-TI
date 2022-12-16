@@ -57,50 +57,19 @@
         });
                              
           }
-          
+          function IncludeJS(pagina, divID){
+              $.ajax({
+                url: pagina,
+                type: 'GET',
+                success: function(data) {
+                  $(divID).html(data);
+                }
+              });
+          }
+
+
+          //////////////////////
  
-
-
-
-
-
-/*
-GUARDAR CÓDIGOS ###
-
-$(function(){
-
-    $('#favoritar').submit(function(event){
-        event.preventDefault();
-        var formDados = new FormData($(this)[0]);
-
-        $.ajax({
-            url:'http://localhost:83/www/modulos/php/Pages_gravarPost.php',
-            type:'POST',
-            data:formDados,
-            cache:false,
-            contentType:false,
-            processData:false,
-            success:function(data){
-                $('#resultado').html(data);
-                //alert('Favoritado Com Sucesso!');
-
-            },
-            dataType:'html'
-        });
-        return false;
-    });
-});
-
-
-    function UrlAjaxPages(tagDiv, divLoad, Arquiv){
-              var load = document.querySelector(divLoad);
-              load.style.display = "flex";
-                      $.post( "www/pages/"+Arquiv, function( data ) {
-                          $( tagDiv ).html( data );
-                          $(tagDiv).ready(function() {
-                            load.style.display = "none";
-                          });
-                      });        
-          }*/
+    
 
       </script>

@@ -41,12 +41,7 @@ function clikButton(bttn){
       div01.style.display = "block";
    }
 }
-          function UrlAjaxPages(tagDiv){
-                      $.post( "Assets/php/functions.php?php=pastasdir", function( data ) {
-                          $( tagDiv ).html( data );
-                      });        
-          }
-          UrlAjaxPages('#Pastamstr');
+         
 
 </script>
 

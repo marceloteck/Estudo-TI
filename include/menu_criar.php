@@ -24,11 +24,15 @@
             <br> <br>
 
                 <label for="inputState" class="form-label">Onde Salvar</label>
-                <select onchange="SelectValue('PastaOption0', 'selectDiv')" name="pastaativa" id="PastaOption0" class="form-control">
+
+
+<button onclick="IncludeJS('Assets/html/select_php.php', '#selectAtive')">aaa</button>
+
+<div id="selectAtive"></div>
+
                 
-                
-                </select>
-                <div id="Pastamstr"></div>
+
+
                 <br />
                 <input  autocomplete="off" onkeyup="titleLink('#title1','#Link1'),CopiarText('#title1', '#Titulo01'),titleLink('#title1', '#Link01')"  type="text" id="title1" class="form-control" placeholder="Escreva o Link">
                 <br />
