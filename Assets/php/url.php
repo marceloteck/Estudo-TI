@@ -33,29 +33,6 @@ function dividirUrl($busca, $valor, $url){
 	return $final_url;
 }
 
-
-function PAGINACAO($link, $destino){
-	$url = explode('?', URL_COMPLETA);
-	$url = explode(URL_PRINCIPAL, $url[0]);
-	$url = explode('&', $url[1]);
-	$url = str_replace('/', '', $url[0]);
-
-	if(URL_UTIMA == ""){
-		include INICIO_PAGES;
-	}else if($url == "index" ){
-		include INICIO_PAGES;
-	}else if($url == $link){
-		include $destino;
-	}else{
-		include ERROR404;
-	}
-}
-
-
-
-
-
-/*********************** */
 function limitChars($text, $limit)
 {
  $join = array();
@@ -71,7 +48,6 @@ function limitChars($text, $limit)
                break;
          }
     }
-    //print_r($join);
     return implode(" ", $join)."...";
 
 }
@@ -90,9 +66,8 @@ function PagAtualLink($valor){
         case 'apagar':
             return APAGAR_PAGES;
             break;
-
 		default:
-			ERROR404;
+			return ERROR404;
 			break;
 	}
 }
@@ -110,9 +85,32 @@ function MENUAtualLink($valor){
         case 'apagar':
             return MENU_INICIO_INCLD;
             break;
+		default:
+			return MENU_INICIO_INCLD;
+			break;
         
 	}
 }
+
+
+/*
+function PAGINACAO($link, $destino){
+	$url = explode('?', URL_COMPLETA);
+	$url = explode(URL_PRINCIPAL, $url[0]);
+	$url = explode('&', $url[1]);
+	$url = str_replace('/', '', $url[0]);
+
+	if(URL_UTIMA == ""){
+		include INICIO_PAGES;
+	}else if($url == "index" ){
+		include INICIO_PAGES;
+	}else if($url == $link){
+		include $destino;
+	}else{
+		include ERROR404;
+	}
+}
+*/
 
 
 ?>

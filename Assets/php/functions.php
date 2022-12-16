@@ -1,46 +1,45 @@
 <?php
-#region salvar 1
-/*
-//caso der problema usar esse código pra liberar o erro 
-function buscarPastaIndex($valor){
-    //$path = "../doc/CURSOS";
-	//$diretorio = dir($path)'';
-	$diretorio = '';
+//DEFINE
 
-		//while($arquivo = $diretorio -> read()){
-		if ($arquivo != '.' && $arquivo != '..' && $arquivo != 'documentação de projetos' && $arquivo != 'sobre as pastas.txt'){
 
-			switch ($valor) {
-				case 'option':
-					$arquivof .= "<option value='$arquivo'>$arquivo</option>";
-					break;
-				case 'simples':
-					$arquivof .= '|'.$arquivo;
-					break;
-			}
+if(isset($_GET['php'])){
+	$Php_Get = $_GET['php'];
+
+	switch ($Php_Get) {
+		case 'pastasdir':
+			echo buscarPastaIndex();
+			break;
 		}
-	//}
-	//$diretorio -> close();
-	return $arquivof;
 }
-#endregion fimsalvar
-*/
 
-function buscarPastaIndex($valor){
-    $path = "../doc/CURSOS";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//FUNÇÕES PHP
+function buscarPastaIndex(){
+    $path = "./Posts";
 	$diretorio = dir($path);
 
 		while($arquivo = $diretorio -> read()){
 		if ($arquivo != '.' && $arquivo != '..' && $arquivo != 'documentação de projetos' && $arquivo != 'sobre as pastas.txt'){
-
-			switch ($valor) {
-				case 'option':
-					$arquivof .= "<option value='$arquivo'>$arquivo</option>";
-					break;
-				case 'simples':
-					$arquivof .= '|'.$arquivo;
-					break;
-			}
+			$arquivo_TITLE = str_replace('-', ' ', $arquivo);
+			$arquivo_TITLE = strtoupper($arquivo_TITLE);
+			$arquivof .= "
+			<option value='$arquivo'>$arquivo_TITLE</option>";
 		}
 	}
 	$diretorio -> close();
@@ -61,17 +60,7 @@ function buscarArquivodaPasta($valor){
 	return $arquivof;
 }
 
-function GetNavtab($valor)
-{
-	
-	switch ($valor) {
-		case 'pastaestudo':
-			return '?pasta='.buscarPastaIndex('simples');
-			break;
 
-	}
-}
-define('GETNAVTAB', GetNavtab('pastaestudo'));
 
 
 

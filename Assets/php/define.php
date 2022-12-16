@@ -27,15 +27,17 @@ define('MENU_CRIAR_INCLD', 'include/menu_criar.php');
 define('MENU_EDITAR_INCLD', 'include/menu_editar.php');
 define('TOPBAR_INCLD', 'include/TopBar.php');
 
-
-
 //PAGES
 define('INICIO_PAGES', 'Pages/inicio.php');
 define('CRIAR_PAGES', 'Pages/criar.php');
 define('EDITAR_PAGES', 'Pages/editar.php');
 define('APAGAR_PAGES', 'Pages/apagar.php');
 define('LOGIN_PAGES', 'Pages/login.php');
-define('ERROR404', 'Pages/404');
+define('ERROR404', 'Pages/404.php');
+
+//ASSETs PHP
+define('PHP_GRAVAR_POST', 'Assets/php/Pages_gravarPost.php');
+
 
 
 

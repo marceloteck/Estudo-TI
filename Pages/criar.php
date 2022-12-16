@@ -1,35 +1,27 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <style>
-                          .btton{
-                            position: absolute;
-                            width: 150px;
-                            float: right;
-                            right: 15px;
-                            top:10px;
-                        }
-                    </style>
-                    
-                    
                     <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <form action="#" method="Post">
+                    <div class="">
+                        <!--card shadow mb-4
+                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Criar um Post de estudo</h6>
-                            <div class="btton">
-                                <button onclick="" type="button"  style="width:100%;" name="button2" class="btn btn-dark">Enviar</button> 
-                            </div>
-                        </div>
+                        </div>-->
                         <div class="card-body">
-
-                        <input  autocomplete="off" style="display: none;" name="title"  type="text" id="Titulo01" class="form-control" placeholder="Titulo">
+                        <form action="#" method="Post">
+                       
+                                <button id="enviarForm1" type="submit"  style="width:100%; display:none;" name="button2" class="btn btn-primary">Enviar</button> 
                         
-                        <input autocomplete="off" style="display: none;" id="Link01" name="link"  type="text" class="form-control" placeholder="Link">
+                        <?php
+                            include PHP_GRAVAR_POST;
+                        ?>
+                        <input  autocomplete="off" style="display: none;" name="title"  type="text" id="Titulo01" class="form-control" placeholder="Escreva o Link">
+                        
+                        <input autocomplete="off" style="display: none;" id="Link01" name="link"  type="text" class="form-control" placeholder="Link formatado">
 
                         <input autocomplete="off" style="display: none;" id="selectDiv" name="select"  type="text" class="form-control" placeholder="select">
 
-                            <textarea name="editor" id="editor" width="100%"></textarea>
+                            <textarea class="shadow" name="editor" id="editor" width="100%"></textarea>
                                 
                          </div>
                     </div>

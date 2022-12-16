@@ -20,6 +20,11 @@
             
 
             <form action="#" class="container-fluid" >
+                
+            <button onclick="clikButton('enviarForm1')" type="button"  style="width:100%;" name="click1" class="btn btn-primary">Enviar</button>
+            <br> <br>
+
+
                 <label for="inputState" class="form-label">Onde Salvar</label>
                 <select onchange="SelectValue('PastaOption0', 'selectDiv')" name="pastaativa" id="PastaOption0" class="form-control">
                 <option value="aqui 1">aqui 1</option>

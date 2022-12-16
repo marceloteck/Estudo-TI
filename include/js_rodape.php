@@ -19,13 +19,36 @@
       Input2web.value = INput1web;
     }
 
-           function SelectValue(SecInput, SecIput2){
-                     var select = document.getElementById(SecInput);
-                    var opcaoTexto = select.options[select.selectedIndex].value;
-                    document.getElementById(SecIput2).value = opcaoTexto;
-                }
-                window.onload = SelectValue('PastaOption0', 'selectDiv');
-                </script>
+  function SelectValue(SecInput, SecIput2){
+      var select = document.getElementById(SecInput);
+      var opcaoTexto = select.options[select.selectedIndex].value;
+     document.getElementById(SecIput2).value = opcaoTexto;
+}
+window.onload = SelectValue('PastaOption0', 'selectDiv');
+
+
+function clikButton(bttn){
+      var button = document.getElementById(bttn);
+      button.click();
+  }
+
+  function MostraOcultar(divMs){
+    var div01 = document.querySelector(divMs);
+    var status = div01.style.display;
+    if(status == "block"){
+      div01.style.display = "none";
+    }else{
+      div01.style.display = "block";
+   }
+}
+          function UrlAjaxPages(tagDiv){
+                      $.post( "Assets/php/functions.php?php=pastasdir", function( data ) {
+                          $( tagDiv ).html( data );
+                      });        
+          }
+          UrlAjaxPages('#Pastamstr');
+
+</script>
 
 <script>
      CKEDITOR.replace( 'editor' );    
