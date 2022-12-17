@@ -20,10 +20,10 @@ if(isset($_POST['title']) or isset($_POST['link']) or isset($_POST['editor'])){
         $format = '<h1>' . TITULO_POST .'</h1>'. EDITOR_POST;
         $escrito = fwrite($fp, $format);
         if($escrito){
-            echo '<div style="display: block;" id="alert" class="alertPost alert alert-success  alert-dismissible fade show" role="alert"> Arquivo enviado com <strong>Sucesso!</strong> <button onclick="MostraOcultar(\'#alert\')" type="button" class="close" data-bs-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div>';
+            echo '<div style="display: block;" id="alert" class="alertPost alert alert-success  alert-dismissible fade show" role="alert"> Arquivo enviado com <strong>Sucesso!</strong> <button onclick="MostraOcultar(\'#alert\',\'block\')" type="button" class="close" data-bs-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div>';
            
         }else{
-            echo '<div style="display: block;" id="alert" class="alertPost alert alert-danger  alert-dismissible fade show" role="alert"> <strong>Não foi possivel</strong> criar o arquivo<button onclick="MostraOcultar(\'#alert\')" type="button" class="close" data-bs-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div>';
+            echo '<div style="display: block;" id="alert" class="alertPost alert alert-danger  alert-dismissible fade show" role="alert"> <strong>Não foi possivel</strong> criar o arquivo<button onclick="MostraOcultar(\'#alert\',\'block\')" type="button" class="close" data-bs-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button></div>';
         }
         fclose($fp);
     }
@@ -33,7 +33,7 @@ if(isset($_POST['title']) or isset($_POST['link']) or isset($_POST['editor'])){
         echo '
         <div style="display: block;" id="alert"  class="alertPost alert alert-danger  alert-dismissible fade show" role="alert"> 
         <strong>ATENÇÃO</strong> Preencha todos os campos para continuar!
-        <button onclick="MostraOcultar(\'#alert\')" type="button" class="close" data-bs-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button>
+        <button onclick="MostraOcultar(\'#alert\',\'block\')" type="button" class="close" data-bs-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button>
         </div>
         
         ';

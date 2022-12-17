@@ -32,7 +32,7 @@
             <button onclick="clikButton('enviarForm1')" type="button"  style="width:100%;" name="click1" class="btn btn-primary">Enviar</button>
             <br> <br>
 
-                <label for="inputState" class="form-label">Onde Salvar &nbsp; <button class="tbNT" type="button" onclick="selectJs()">  <i class="material-icons">&#xe5d5;</i> <a href="#" onclick="MostraOcultar('#NvaPasta', 'block')"> <i class="material-icons">&#xe2cc;</i></a></button></label>
+                <label for="inputState" class="form-label">Onde Salvar &nbsp; <button class="tbNT" type="button" onclick="selectJs()">  <i class="material-icons">&#xe5d5;</i> <!--<a href="#" onclick="MostraOcultar('#NvaPasta', 'block')"> <i class="material-icons">&#xe2cc;</i>--></a></button></label>
                 <div id="selectAtive"></div>
                 <br />
                 <input  autocomplete="off" onkeyup="titleLink('#title1','#Link1'),CopiarText('#title1', '#Titulo01'),titleLink('#title1', '#Link01')"  type="text" id="title1" class="form-control" placeholder="Escreva o Link">
