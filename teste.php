@@ -4,10 +4,13 @@
 <button onclick="IncludeJS('teste2.php?url=GET funcinando', '#conteudo')" id="acessar">Clique para obter o conteúdo deste site</button>
 
 
-<div id="conteudo" style="background:#EEF0A6"></div>
+<div id="selectAtive" style="background:#EEF0A6"></div>
 
 
 <script>
+window.onload = IncludeJS('Assets/html/select_php.php', '#selectAtive');
+
+
 
 function IncludeJS(pagina, divID){
               $.ajax({

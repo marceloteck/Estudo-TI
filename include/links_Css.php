@@ -11,3 +11,6 @@
     <link href="<?=URL_PRINCIPAL?>/Assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <script src="Assets/lib/ckeditor/ckeditor.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

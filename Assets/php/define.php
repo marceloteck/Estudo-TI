@@ -4,7 +4,7 @@ define("URL_PRINCIPAL", Url('host'));
 define("URL_PAGINAS", Url('uri'));
 define("URL_COMPLETA", Url('UrlAtual'));
 define("URL_UTIMA", dividirUrl("/", 1, URL_COMPLETA));
-define("URL_UTIMA_get", dividirUrl("?url=", 1, URL_COMPLETA));
+define("URL_UTIMA_get", dividirUrl("?past=", 1, URL_COMPLETA));
 
 /** functions Pag **/
 //define("TITULO_DOSITE", titleWeb('titleSite'));
@@ -37,6 +37,9 @@ define('ERROR404', 'Pages/404.php');
 
 //ASSETs PHP
 define('PHP_GRAVAR_POST', 'Assets/php/Pages_gravarPost.php');
+
+//ASSETs JAVASCRIPT
+define('INCLUDE_JS', 'Assets/js/include_JS.php');
 
 
 

@@ -1,4 +1,8 @@
 <script type="text/javascript">
+
+
+
+
       function Navtab(value, div1, div2){
         var valuediv = document.querySelector(value);
         var divtab = document.querySelector(value + '-tab');
@@ -57,16 +61,7 @@
         });
                              
           }
-          function IncludeJS(pagina, divID){
-              $.ajax({
-                url: pagina,
-                type: 'GET',
-                success: function(data) {
-                  $(divID).html(data);
-                }
-              });
-          }
-
+       
 
           //////////////////////
  

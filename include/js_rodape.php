@@ -1,4 +1,5 @@
-<script>
+<script type="text/javascript">
+
      function removerAcentos(s) {
       return s.normalize('NFD')
         .replace(/[\u0300-\u036f]/g, "")
@@ -32,13 +33,13 @@ function clikButton(bttn){
       button.click();
   }
 
-  function MostraOcultar(divMs){
+  function MostraOcultar(divMs, displayDiv){
     var div01 = document.querySelector(divMs);
     var status = div01.style.display;
-    if(status == "block"){
+    if(status == displayDiv){
       div01.style.display = "none";
     }else{
-      div01.style.display = "block";
+      div01.style.display = displayDiv;
    }
 }
          

@@ -1,41 +1,15 @@
 <?php
-//DEFINE
-
-
-if(isset($_GET['php'])){
-	$Php_Get = $_GET['php'];
-
-	switch ($Php_Get) {
-		case 'pastasdir':
-			echo buscarPastaIndex();
-			break;
-		}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+require_once 'conf.php';
+// DEFINE LOCAL
+define('BUSCPASTA', buscarPastaIndex("../../Posts"));
 
 //FUNÇÕES PHP
-function buscarPastaIndex(){
-    $path = "./Posts";
+function buscarPastaIndex($pastaLc){
+    $path = $pastaLc;
 	$diretorio = dir($path);
 
 		while($arquivo = $diretorio -> read()){
-		if ($arquivo != '.' && $arquivo != '..' && $arquivo != 'documentação de projetos' && $arquivo != 'sobre as pastas.txt'){
+		if ($arquivo != 'index.php' && $arquivo != '.' && $arquivo != '..' && $arquivo != 'documentação de projetos' && $arquivo != 'sobre as pastas.txt'){
 			$arquivo_TITLE = str_replace('-', ' ', $arquivo);
 			$arquivo_TITLE = strtoupper($arquivo_TITLE);
 			$arquivof .= "
