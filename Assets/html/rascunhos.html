@@ -1,0 +1,14 @@
+
+
+<div id="alertadiv1"></div>
+<script type="text/javascript">
+    function alerta(TEXto, AvisoCor, DivId){
+                $.ajax({
+                    url: 'Assets/html/alerta.php?aviso='+TEXto+'&cor='+AvisoCor,
+                    type: 'GET',
+                    success: function(data) {
+                    $(DivId).html(data);
+                    }
+                });
+            }
+</script>

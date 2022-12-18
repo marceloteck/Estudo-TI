@@ -4,7 +4,11 @@ define("URL_PRINCIPAL", Url('host'));
 define("URL_PAGINAS", Url('uri'));
 define("URL_COMPLETA", Url('UrlAtual'));
 define("URL_UTIMA", dividirUrl("/", 1, URL_COMPLETA));
+define("URL_ANTERIO", dividirUrl("/", 2, URL_COMPLETA));
 define("URL_UTIMA_get", dividirUrl("?past=", 1, URL_COMPLETA));
+$URL_ANTERIO = str_replace('%20', ' ', URL_ANTERIO);
+$URL_UTIMA = str_replace('%20', ' ', URL_UTIMA);
+define('PATH_pOST', './Posts/' . $URL_ANTERIO . '/' .$URL_UTIMA.'.php');
 
 /** functions Pag **/
 //define("TITULO_DOSITE", titleWeb('titleSite'));
@@ -32,6 +36,7 @@ define('INICIO_PAGES', 'Pages/inicio.php');
 define('CRIAR_PAGES', 'Pages/criar.php');
 define('EDITAR_PAGES', 'Pages/editar.php');
 define('APAGAR_PAGES', 'Pages/apagar.php');
+define('POST_PAGES', 'Pages/posts.php');
 define('LOGIN_PAGES', 'Pages/login.php');
 define('ERROR404', 'Pages/404.php');
 

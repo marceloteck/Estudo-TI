@@ -5,15 +5,14 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">ERRO: Não encontramos:  <?php
-                                echo PATH_pOST;
-                                ?></h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Centro de Leitura</h6>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
-                                
-                            <center><img src="/Assets/img/404.webp" alt=""></center>
+                            <div id="TEXtPostEdt">
+                            
+                                <?php include PATH_pOST;?>
                             </div>
+                            
                         </div>
                     </div>
 

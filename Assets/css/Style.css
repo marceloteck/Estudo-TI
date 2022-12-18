@@ -32,8 +32,6 @@ body::-webkit-scrollbar {
   width: 80%;
   
 }
-
-
 /** bootrap **/
 .close {
   float: right;
@@ -50,4 +48,11 @@ body::-webkit-scrollbar {
 }
 .close:not(:disabled):not(.disabled) {
   cursor: pointer;
+}
+.Nvps{
+  margin-top: 5px;
+  border-color:#4e73df;
+}
+.Nvps::placeholder {
+color: #4e73df;
 }

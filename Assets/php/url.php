@@ -48,7 +48,7 @@ function limitChars($text, $limit)
                break;
          }
     }
-    return implode(" ", $join)."...";
+    return implode(" ", $join);
 
 }
 
@@ -67,7 +67,7 @@ function PagAtualLink($valor){
             return APAGAR_PAGES;
             break;
 		default:
-			return ERROR404;
+			return paginasWEb();
 			break;
 	}
 }
@@ -91,26 +91,17 @@ function MENUAtualLink($valor){
         
 	}
 }
-
-
-/*
-function PAGINACAO($link, $destino){
+function paginasWEb(){
 	$url = explode('?', URL_COMPLETA);
 	$url = explode(URL_PRINCIPAL, $url[0]);
 	$url = explode('&', $url[1]);
 	$url = str_replace('/', '', $url[0]);
-
-	if(URL_UTIMA == ""){
-		include INICIO_PAGES;
-	}else if($url == "index" ){
-		include INICIO_PAGES;
-	}else if($url == $link){
-		include $destino;
+	if(file_exists(PATH_pOST)){
+		return POST_PAGES;
 	}else{
-		include ERROR404;
+		return ERROR404;	
 	}
 }
-*/
 
 
 ?>
