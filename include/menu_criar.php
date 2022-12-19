@@ -14,9 +14,9 @@
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Formulario:</h6>
             <form action="#" class="container-fluid" >
-            <button onclick="clikButton('enviarForm1')" type="button"  style="width:100%;" name="click1" class="btn btn-primary">Enviar</button>
+            <button onclick="clikButton('enviarForm1')" type="button"  style="width:100%;" name="click1" class="btn btn-primary">Criar</button>
             <br> <br>
-                <label for="inputState" class="form-label">Onde Salvar &nbsp; 
+                <label for="inputState" class="form-label">Salvar: &nbsp; 
                 <button class="tbNT" type="button" onclick="selectJs()">  
                     <i class="material-icons">&#xe5d5;</i> 
                 </button>
@@ -30,6 +30,13 @@
                 <br />
                 <input autocomplete="off" readonly style="display: block;" id="Link1"  type="text" class="form-control" placeholder="Link formatado">
                 <br />
+
+                <button style="width:100%;"  type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Editar
+                </button>
+
+
+
             </form>
         </div>
     </div>
@@ -44,14 +51,99 @@
   background-color: #fff;
   position: absolute;
   margin-top:-10px;
+  float: left;
 }
 .tbNT2{
   border: 0px;
   background-color: #fff;
   position: absolute;
   margin-top:-10px;
-  right: 10px;
+  float: right;
+  margin-left: 30px;
 }
  </style>
  <!-- #region  CSS do menu criar-->
 <?php include INCLUDE_JS;?>
+
+<style>
+    .modal a{
+        text-decoration: none;
+       
+    }
+</style>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="fs-5" id="exampleModalLabel">GERENCIAR SEUS POSTs</h1> 
+        
+	    <div style="float: right; position: absolute; right: 50px;" class="bm-4"><input class="form-control" onkeyup="pesquisa()" type="text" placeholder="Buscar..." id="searchBsc"/>
+        </div>
+
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+      <div id="divDE2"></div>
+      <script>
+        divDE2();
+        function divDE2(){IncludeJS('Assets/php/GerenciarPsts.php', '#divDE2');}
+      </script>
+      
+      <?php
+      //include "Assets/php/GerenciarPsts.php";
+      ?>
+      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js
+"></script>
+
+<script type="text/javascript">
+        function pesquisa(){
+        var buscarPOr = "tr";
+        var IDBuscador = "#searchBsc";
+				$(buscarPOr).hide();
+				var txt = $(IDBuscador).val();
+				$(buscarPOr).each(function(){
+				   if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+					   $(this).show();
+				   }
+				});
+}
+		</script>
+
+        <style>
+            .confEdit{
+                position: relative;
+                float: left;
+                padding: 0px;
+            }
+            .confEdit button{
+                margin-right:5px;
+                
+            }
+            .confEdit button i{
+                font-size: 1.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .tdTAb{
+                float:left;
+                min-width: 20%;
+                margin-left: 5px;
+            }
+        </style>
+
+
+

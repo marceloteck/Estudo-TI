@@ -6,4 +6,3 @@
 <input onchange="NvaPast()"  class="form-control Nvps" placeholder="Nova pasta" style="display: none;" type="text"  id="NvaPasta">
 <div id="finalres"></div>
 
-<button ></button>

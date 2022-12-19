@@ -16,4 +16,7 @@
         $('#PastaOption0').select2();
         
     }
+    function teste(){ 
+        alert('teste');
+    }
 </script>
