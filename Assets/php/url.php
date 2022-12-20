@@ -80,7 +80,7 @@ function MENUAtualLink($valor){
 			return MENU_CRIAR_INCLD;
 			break;
 		case 'editar':
-			return MENU_EDITAR_INCLD;
+			return MENU_CRIAR_INCLD;
 			break;
         case 'apagar':
             return MENU_INICIO_INCLD;

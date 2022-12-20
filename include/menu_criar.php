@@ -113,7 +113,7 @@ function divDE2(){IncludeJS('Assets/php/GerenciarPsts.php', '#divDE2');}
                 padding: 0px;
             }
             .confEdit button{
-                margin-right:5px;
+                margin-right:0px;
                 
             }
             .confEdit button i{

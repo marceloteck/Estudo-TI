@@ -8,6 +8,10 @@
                         </div>-->
                         <div class="card-body">
                         <form action="#" method="Post">
+                <?php
+echo $_GET['edit'];
+                ?>
+
                             <!-- itens ocultos para envio de formulario -->
                             <button id="enviarForm1" type="submit"  style="width:100%; display:none;" name="button2" class="btn btn-primary">Enviar</button> 
                         <?php include PHP_GRAVAR_POST; ?>

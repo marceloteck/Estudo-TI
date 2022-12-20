@@ -11,18 +11,16 @@ function pastasMissa(){
 			<div class="">  
 				  <div class="">
 					  <div class="table-responsive" width="80%" style="overflow-x: hidden;">
-						  <table class="shadow table table-borderless" id="dataTable-'.$i.'" width="100%" cellspacing="0">			
+						  <table class="shadow table table-borderless border-top" id="" width="100%" cellspacing="0">			
                                     <thead>
                                         <tr>
-                                            <th><div class="confEdit"><button onclick="ApagarArquvs(\'?DirDel=Posts/'.$arquivo.'\',\''.$arquivo.'\')" type="button" class="btn btn-circle btn-sm "> <i class="material-icons">&#xe872;</i></button></div>  # '.$arquivo.'</th>
+                                            <th><div class="confEdit"><button onclick="ApagarArquvs(\'?DirDel=Posts/'.$arquivo.'\',\''.$arquivo.'\')" type="button" class="btn btn-circle btn-sm "> <i class="material-icons">&#xe872;</i></button></div>  # '.$arquivo.'
+											
+											</th>
                                         </tr>
                                     </thead>
-									<tfoot>
-                                        <tr>
-										<th></th>
-                                        </tr>
-                                    </tfoot>
-									<tbody>';			
+									
+									';			
 						
 			$empty = ((count(glob("$path1/*")) === 0) ? true : false);
 			if(!$empty){
@@ -36,12 +34,16 @@ function pastasMissa(){
 							<tr>
                              <td>
 							 <div class="confEdit">
-								<button onclick="ApagarArquvs(\'?arquivo='.$arL.'.php&dir=Posts/'.$arquivo.'/\',\''.$arf.'\')" type="button" class="btn btn-danger"> <i class="material-icons">&#xe872;</i></button>
-								<button type="button" class="btn btn-success"><i class="material-icons">&#xe3c9;</i></button>	
+								<button onclick="ApagarArquvs(\'?arquivo='.$arL.'.php&dir=Posts/'.$arquivo.'/\',\''.$arf.'\')" type="button" class="btn "> <i class="material-icons">&#xe872;</i></button>
+								<a href="/editar?edit=/Posts/'.$arquivo.'/'.$arL.'">
+									<button type="button" class="btn "><i class="material-icons">&#xe3c9;</i></button>
+								</a>	
 							 </div> 
 							 <div class="tdTAb"><a  class="" href="/url/'.$arquivo.'/'.$arL.'/">'.$arf.'</a></div>
 							 </td>
-							</tr>	
+							 
+							</tr>
+							
                             ';		
 					} //Assets/php/ApagarArquivo.php?arquivo=&dir=
 					//onclick="ApagarArquvs(\''.$arL.'.php\',\'Posts/'.$arquivo.'/\', \''.$arf.'\')"

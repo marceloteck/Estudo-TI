@@ -17,7 +17,16 @@ include RODAPE_INCLD; */
 #endregion
 
 if(URL_UTIMA == ""){ $LinkUrl = "inicio"; }
-else{ $LinkUrl = URL_UTIMA; }
+else{ 
+    $url = explode('?', URL_COMPLETA);
+	$url = explode(URL_PRINCIPAL, $url[0]);
+	$url = explode('&', $url[1]);
+	$url = str_replace('/', '', $url[0]);
+    $LinkUrl = $url;
+
+}
+
+echo   $LinkUrl.'  - aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
 
 define('INCLUDE_ATUAL',PagAtualLink($LinkUrl));
 define('MENU_ATUAL',MENUAtualLink($LinkUrl));
