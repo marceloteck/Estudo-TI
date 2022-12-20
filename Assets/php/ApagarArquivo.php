@@ -1,7 +1,9 @@
 <?php
+require_once "conf.php";
 $pastaDir 	  = $_GET['dir'];
 $ArquivoLetra = $_GET['arquivo'];
-if(isset($ArquivoLetra)){
+$DirDel = $_GET['DirDel'];
+if($ArquivoLetra != ""){
   $arvuivoFnl = '../../'.$pastaDir.$ArquivoLetra;
 	$resultado = unlink($arvuivoFnl);
 	if($resultado){
@@ -9,7 +11,8 @@ if(isset($ArquivoLetra)){
 	}else{
   //  echo "<script>alert('não apagou');</script>";
 	}
-}else if(isset($DirDel)){
+}else if($DirDel != ""){
+  $DirDel = "../../$DirDel";
  function delTree($dir) { 
       $files = array_diff(scandir($dir), array('.','..')); 
       foreach ($files as $file) { 

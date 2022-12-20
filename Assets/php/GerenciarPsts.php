@@ -2,22 +2,19 @@
 function pastasMissa(){
 	$path = "../../Posts/";
 		$diretorio = dir($path);
-
 		$i = 1;
 		while($arquivo = $diretorio -> read()){
-	
 		if ($arquivo != '.' && $arquivo != '..'&& $arquivo != 'index.php'){
+			$path1 = $path.$arquivo;
 			
 			echo '<!-- DataTales Example -->
-			<div class="">
-				  
+			<div class="">  
 				  <div class="">
 					  <div class="table-responsive" width="80%" style="overflow-x: hidden;">
-						  <table class="shadow table table-borderless" id="dataTable-'.$i.'" width="100%" cellspacing="0">
-			
+						  <table class="shadow table table-borderless" id="dataTable-'.$i.'" width="100%" cellspacing="0">			
                                     <thead>
                                         <tr>
-                                            <th># '.$arquivo.'</th>
+                                            <th><div class="confEdit"><button onclick="ApagarArquvs(\'?DirDel=Posts/'.$arquivo.'\',\''.$arquivo.'\')" type="button" class="btn btn-circle btn-sm "> <i class="material-icons">&#xe872;</i></button></div>  # '.$arquivo.'</th>
                                         </tr>
                                     </thead>
 									<tfoot>
@@ -25,13 +22,8 @@ function pastasMissa(){
 										<th></th>
                                         </tr>
                                     </tfoot>
-									<tbody>					
-			';
-			
-			
-			$path1 = $path.$arquivo;
-		
-			
+									<tbody>';			
+						
 			$empty = ((count(glob("$path1/*")) === 0) ? true : false);
 			if(!$empty){
 				$dirr = dir($path1);
@@ -42,27 +34,19 @@ function pastasMissa(){
 					$arf = ucfirst($arf);
 					echo '
 							<tr>
-                             <td><a  class="" href="/url/'.$arquivo.'/'.$arL.'">
+                             <td>
 							 <div class="confEdit">
-							 <button type="button" class="btn btn-danger"><i class="material-icons">&#xe872;</i></button></button>
-
-
-							 <button type="button" class="btn btn-success"><i class="material-icons">&#xe3c9;</i></button>	
-							 </div>
-							 <div class="tdTAb">'.$arf.'</div></a>
-
-							 <div class="confEdit">
-							 	<button onclick="excluirItemSelecionado(\''.$arL.'.php\',\'Posts/'.$arquivo.'/\', \''.$arL.'\')" type="button" class="btn btn-danger"> <i class="material-icons">&#xe872;</i></button>
-							 </div>
-
+								<button onclick="ApagarArquvs(\'?arquivo='.$arL.'.php&dir=Posts/'.$arquivo.'/\',\''.$arf.'\')" type="button" class="btn btn-danger"> <i class="material-icons">&#xe872;</i></button>
+								<button type="button" class="btn btn-success"><i class="material-icons">&#xe3c9;</i></button>	
+							 </div> 
+							 <div class="tdTAb"><a  class="" href="/url/'.$arquivo.'/'.$arL.'/">'.$arf.'</a></div>
 							 </td>
-							</tr>
-							
+							</tr>	
                             ';		
-					}
+					} //Assets/php/ApagarArquivo.php?arquivo=&dir=
+					//onclick="ApagarArquvs(\''.$arL.'.php\',\'Posts/'.$arquivo.'/\', \''.$arf.'\')"
 				}			
 			$dirr -> close();
-			
 			}else{
 				echo '
 				<tbody>
@@ -73,42 +57,50 @@ function pastasMissa(){
 			}
 			echo '  
 			</tbody> 
-			</table>
-		</div>
-	</div>
-</div>';
+					</table>
+				</div>
+			</div>
+		</div>';
 		}
 		$i++;
 		}
 		$diretorio -> close();	
 	}
-pastasMissa();
+		pastasMissa();
     ?>
-
-            
-<div id="divDEl"></div>
-
-
 <script>
-    function excluirItemSelecionado(ItemApagar,dir, NameRq){
-        var resultado = confirm("Deseja excluir o item: ?");
+    function ApagarArquvs(ItemApagar,NameRq){
+        var resultado = confirm("Deseja excluir o item: "+NameRq+" ?");
         if (resultado == true) {
           $.ajax({
-                    url: 'Assets/php/ApagarArquivo.php?arquivo='+ItemApagar+'&dir='+dir,
+                    url: 'Assets/php/ApagarArquivo.php'+ItemApagar,
                     type: 'GET',
                     success: function(data) {
-                    $('#divDEl').html(data);
-                    divDE2();
+						//$('#divtesr').html(data);
+                     divDE2();
                     }
                 });
-            
-
-        
-         
         }
         else{
             alert("Cancelado pelo usuário!");
         }
     }
-</script>.
+/*
+function ApagarArquvs(ItemApagar,dir, NameRq){
+        var resultado = confirm("Deseja excluir o item: "+NameRq+" ?");
+        if (resultado == true) {
+          $.ajax({
+                    url: 'Assets/php/ApagarArquivo.php?arquivo='+ItemApagar+'&dir='+dir,
+                    type: 'GET',
+                    success: function(data) {
+                    divDE2();
+                    }
+                });
+        }
+        else{
+            alert("Cancelado pelo usuário!");
+        }
+    }*/
+	
+</script>
 

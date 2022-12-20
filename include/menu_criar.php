@@ -61,45 +61,28 @@
   float: right;
   margin-left: 30px;
 }
- </style>
- <!-- #region  CSS do menu criar-->
-<?php include INCLUDE_JS;?>
-
-<style>
-    .modal a{
+.modal a{
         text-decoration: none;
        
     }
-</style>
+ </style>
+ <!-- #region  CSS do menu criar-->
+<?php include INCLUDE_JS;?>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="fs-5" id="exampleModalLabel">GERENCIAR SEUS POSTs</h1> 
-        
 	    <div style="float: right; position: absolute; right: 50px;" class="bm-4"><input class="form-control" onkeyup="pesquisa()" type="text" placeholder="Buscar..." id="searchBsc"/>
         </div>
-
-
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-
       <div id="divDE2"></div>
-      <script>
-        divDE2();
-        function divDE2(){IncludeJS('Assets/php/GerenciarPsts.php', '#divDE2');}
-      </script>
-      
-      <?php
-      //include "Assets/php/GerenciarPsts.php";
-      ?>
-      
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>
@@ -107,7 +90,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js
 "></script>
-
 <script type="text/javascript">
         function pesquisa(){
         var buscarPOr = "tr";
@@ -120,7 +102,9 @@
 				   }
 				});
 }
-		</script>
+divDE2();
+function divDE2(){IncludeJS('Assets/php/GerenciarPsts.php', '#divDE2');}
+      </script>
 
         <style>
             .confEdit{
@@ -144,6 +128,3 @@
                 margin-left: 5px;
             }
         </style>
-
-
-

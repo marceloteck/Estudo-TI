@@ -16,20 +16,6 @@
     <!-- colocar o show para mostrar -->
     <div id="collapseTree" class="collapse  tooltip-demo" aria-labelledby="headingTree" data-parent="#accordionSidebar">
         <?php include 'Assets/php/PastasDIR.php'; ?>
-
-
-        
-
-       <!-- <div class="bg-white py-2 collapse-inner rounded">
-            <h4 class="collapse-header">HTML 5:</h4>
-            <?php
-            for ($i = 1; $i <= 10; $i++){
-                echo '<a class="collapse-item" href="/">inicio '.$i.'</a>';
-            }
-            ?>
-        </div>-->
-
-
     </div>
 </li>
 
