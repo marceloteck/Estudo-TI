@@ -11,7 +11,7 @@
                             <div class="table-responsive">
                              <!--------------------------------------------------->  
                              
-                             <link rel="stylesheet" href="./Assets/editorHtml/css/reset.css" type="text/css">
+                             <!--<link rel="stylesheet" href="./Assets/editorHtml/css/reset.css" type="text/css">-->  
                             <link rel="stylesheet" href="./Assets/editorHtml/css/style.css" type="text/css">
                             <script src="https://cdn.firebase.com/v0/firebase.js"></script>
                             <script src="./Assets/editorHtml/js/vendor/codemirror.js"></script>
@@ -23,8 +23,7 @@
                             <script src="./Assets/editorHtml/js/vendor/jquery-ui.js"></script>
 
                             <script src="./Assets/editorHtml/js/app.js"></script>
-                            </head>
-                            <body class="cm-s-default">
+                    
 
                             <div id="controls">
                                 <!-- <a class="button together button-on" onclick="TogetherJS(this); return false;" title="toggle collaboration"></a> -->
