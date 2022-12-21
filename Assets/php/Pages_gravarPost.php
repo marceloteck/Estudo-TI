@@ -5,9 +5,24 @@ if(isset($_POST['title']) or isset($_POST['link']) or isset($_POST['editor'])){
     define('EDITOR_POST',$_POST['editor']);
     define('PASTA_POST',$_POST['select']);
 
+    
+
     function CriarArquivo(){
+      if(LINK_POST != URL_UTIMA){
+        $NameAtg = './Posts/'.PASTA_POST.'/'.URL_UTIMA.'.php';
+        $NameNv = './Posts/'.PASTA_POST.'/'.LINK_POST.'.php';
+        $rsutFnal = rename($NameAtg, $NameNv); // Resultado: TRUE /
+      echo $NameAtg.'<br>'.$NameNv.'<br>';
+      if($rsutFnal == true){
+        echo 'deu certo';
+      }else{
+        echo 'não deu certo';
+      }
+      }
+
         $pasta = './Posts/'.PASTA_POST.'/';
         $arquivo = $pasta.LINK_POST.'.php';
+        $Linknv = URL_PRINCIPAL . "/editar?edit=Posts"."/" . PASTA_POST . "/".LINK_POST;
         $fp = fopen($arquivo, "w+");
         $InfoEscrita = '
         <!-- /**
@@ -25,6 +40,7 @@ if(isset($_POST['title']) or isset($_POST['link']) or isset($_POST['editor'])){
         $format =  $conteudoPOST.$InfoEscrita;
         $escrito = fwrite($fp, $format);
         if($escrito){
+          
             echo '<div style="display: block;" class="modal fade show" id="MODALdiv" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  >
             <div class="modal-dialog">
               <div class="modal-content">
@@ -44,7 +60,10 @@ if(isset($_POST['title']) or isset($_POST['link']) or isset($_POST['editor'])){
             </div>
           </div>
           <div style="display: block;"  id="MODALdiv-1" class="modal-backdrop fade show"></div>';
-           
+          if($rsutFnal == true){
+            header("Location: $Linknv");
+            
+          }
         }else{
             echo '<div style="display: block;" class="modal fade show" id="MODALdiv" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  >
             <div class="modal-dialog">
