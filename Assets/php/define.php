@@ -3,18 +3,20 @@
 define("URL_PRINCIPAL", Url('host'));
 define("URL_PAGINAS", Url('uri'));
 define("URL_COMPLETA", Url('UrlAtual'));
+
 define("URL_UTIMA", dividirUrl("/", 1, URL_COMPLETA));
 define('URL_UTIMA_Format', str_replace('-', ' ', URL_UTIMA));
+
+define("EXPLODE_SELECAO", ExplodeURL('/', '?', '1', '0', URL_PAGINAS));
+
+
 define("URL_ANTERIO", dividirUrl("/", 2, URL_COMPLETA));
 define("URL_UTIMA_get", dividirUrl("?past=", 1, URL_COMPLETA));
 define("EDITAR_get", dividirUrl("?edit=", 1, URL_COMPLETA));
+
 $URL_ANTERIO = str_replace('%20', ' ', URL_ANTERIO);
 $URL_UTIMA = str_replace('%20', ' ', URL_UTIMA);
 define('PATH_pOST', './Posts/' . $URL_ANTERIO . '/' .$URL_UTIMA.'.php');
-
-
-
-
 
 
 /** functions Pag **/

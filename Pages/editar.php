@@ -24,7 +24,16 @@
                             <input autocomplete="off" style="display: none;" id="selectDiv" name="select"  type="text" class="form-control" placeholder="select">
                             <!-- itens ocultos para envio de formulario -->
                             <!-- TEXTAREA -->
-                            <textarea class="shadow" name="editor" id="editor" width="100%"><?php include EDITANDO_ARQUIVO; ?></textarea>
+                            <textarea class="shadow" name="editor" id="editor" width="100%">
+                            <?php 
+                            if(file_exists(EDITANDO_ARQUIVO)){
+                                include EDITANDO_ARQUIVO; 
+                            }else{
+                                echo '<h1><span style="font-size:36px"><span style="color:#c0392b">Esse arquivo n&atilde;o EXISTE!</span></span></h1>';
+                            }
+                           
+                            ?>
+                            </textarea>
                             <!-- TEXTAREA -->
                         </div>
                     </div>

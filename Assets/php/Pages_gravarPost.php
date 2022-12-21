@@ -11,25 +11,21 @@ if(isset($_POST['title']) or isset($_POST['link']) or isset($_POST['editor'])){
       if(LINK_POST != URL_UTIMA){
         $NameAtg = './Posts/'.PASTA_POST.'/'.URL_UTIMA.'.php';
         $NameNv = './Posts/'.PASTA_POST.'/'.LINK_POST.'.php';
-        $rsutFnal = rename($NameAtg, $NameNv); // Resultado: TRUE /
-      echo $NameAtg.'<br>'.$NameNv.'<br>';
-      if($rsutFnal == true){
-        echo 'deu certo';
+        $rsutFnal = rename($NameAtg, $NameNv); // Resultado: TRUE / 
+        if($rsutFnal == true){
+          $renameOK = "Renomeado com Sucesso!";
+        }else{
+          $renameOK = "N&atilde;o foi possivel renomear";
+        }
       }else{
-        echo 'não deu certo';
-      }
+        $renameOK = "";
       }
 
         $pasta = './Posts/'.PASTA_POST.'/';
         $arquivo = $pasta.LINK_POST.'.php';
         $Linknv = URL_PRINCIPAL . "/editar?edit=Posts"."/" . PASTA_POST . "/".LINK_POST;
         $fp = fopen($arquivo, "w+");
-        $InfoEscrita = '
-        <!-- /**
-        --TITULO--:' . TITULO_POST .'|
-        --LINK--:' . $arquivo .'|
-        **/ -->
-        ';
+        $InfoEscrita = '<!-- /** --TITULO--:' . TITULO_POST .'| --LINK--:' . $arquivo .'| **/ -->';
         if(str_replace('<!-- /**','',EDITOR_POST)){
           $conteudoPOST = explode('<!-- /**', EDITOR_POST);
           $conteudoPOST = $conteudoPOST[0];
@@ -46,24 +42,22 @@ if(isset($_POST['title']) or isset($_POST['link']) or isset($_POST['editor'])){
               <div class="modal-content">
                 <div class="modal-header">
                   <h1 class="fs-5" id=""><i class="fas fa-exclamation-triangle"></i> Aviso</h1>
-                  <button onclick="hideNone(\'#MODALdiv\')" type="button" class="btn-close"></button>
+                  <button onclick="hideNone(\'#MODALdiv\'),RedirectUrl(\''.$Linknv.'\')" type="button" class="btn-close"></button>
                 </div>
                 <div class="modal-body">
                  <div id="AvsAlert1"><i class="fas fa-info-circle"></i> Arquivo enviado com <strong>Sucesso!</strong> 
+                 <br>
+                 '.$renameOK.'
                  </div>
                  </div>
                 <div class="modal-footer">
-                  <button onclick="hideNone(\'#MODALdiv\')" type="button" class="btn btn-secondary">Fechar</button>
+                  <button onclick="hideNone(\'#MODALdiv\'),RedirectUrl(\''.$Linknv.'\')" type="button" class="btn btn-secondary">Fechar</button>
                   
                 </div>
               </div>
             </div>
           </div>
           <div style="display: block;"  id="MODALdiv-1" class="modal-backdrop fade show"></div>';
-          if($rsutFnal == true){
-            header("Location: $Linknv");
-            
-          }
         }else{
             echo '<div style="display: block;" class="modal fade show" id="MODALdiv" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  >
             <div class="modal-dialog">
@@ -115,6 +109,12 @@ if(isset($_POST['title']) or isset($_POST['link']) or isset($_POST['editor'])){
 ?>
 
 <script>
+function RedirectUrl(url){
+  window.location.href = url;
+}
+
+
+
       function hideNone(IDdv){
         var idModal = document.querySelector(IDdv);
         var idModal1 = document.querySelector(IDdv+'-1');

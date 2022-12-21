@@ -14,7 +14,11 @@
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Formulario:</h6>
             <form action="#" class="container-fluid" >
-            <button onclick="clikButton('enviarForm1')" type="button"  style="width:100%;" name="click1" class="btn btn-primary">Criar</button>
+            <button onclick="clikButton('enviarForm1')" type="button"  style="width:100%;" name="click1" class="btn btn-primary">
+            <?php 
+            if(EXPLODE_SELECAO == "editar"){ echo "Salvar"; }else{ echo "Criar";}
+            ?>
+            </button>
             <br> <br>
             <button onclick="" type="button"  style="width:100%;" name="click1" class="btn btn-secondary">Pré-visualizar</button>
             <br> <br>
