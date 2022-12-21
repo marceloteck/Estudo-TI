@@ -9,7 +9,20 @@ if(isset($_POST['title']) or isset($_POST['link']) or isset($_POST['editor'])){
         $pasta = './Posts/'.PASTA_POST.'/';
         $arquivo = $pasta.LINK_POST.'.php';
         $fp = fopen($arquivo, "w+");
-        $format = '<h1>' . TITULO_POST .'</h1>'. EDITOR_POST;
+        $InfoEscrita = '
+        <!-- /**
+        --TITULO--:' . TITULO_POST .'|
+        --LINK--:' . $arquivo .'|
+        **/ -->
+        ';
+        if(str_replace('<!-- /**','',EDITOR_POST)){
+          $conteudoPOST = explode('<!-- /**', EDITOR_POST);
+          $conteudoPOST = $conteudoPOST[0];
+        }else{
+          $conteudoPOST = EDITOR_POST;
+        }
+
+        $format =  $conteudoPOST.$InfoEscrita;
         $escrito = fwrite($fp, $format);
         if($escrito){
             echo '<div style="display: block;" class="modal fade show" id="MODALdiv" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  >

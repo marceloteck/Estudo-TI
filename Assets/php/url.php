@@ -28,7 +28,9 @@ function dividirUrl($busca, $valor, $url){
 	$final_url = $urlF[$valortotal];
 	$final_url = explode('?', $final_url);
 	$final_url = explode('&', $final_url[0]);
-	$final_url = str_replace('/', '', $final_url[0]);
+	//$final_url = str_replace('/', '', $final_url[0]);
+	$final_url = $final_url[0];
+	$final_url = str_replace('%20', ' ', $final_url);
 
 	return $final_url;
 }

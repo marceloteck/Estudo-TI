@@ -26,8 +26,6 @@ else{
 
 }
 
-echo   $LinkUrl.'  - aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
-
 define('INCLUDE_ATUAL',PagAtualLink($LinkUrl));
 define('MENU_ATUAL',MENUAtualLink($LinkUrl));
 

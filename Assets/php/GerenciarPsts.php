@@ -35,34 +35,27 @@ function pastasMissa(){
                              <td>
 							 <div class="confEdit">
 								<button onclick="ApagarArquvs(\'?arquivo='.$arL.'.php&dir=Posts/'.$arquivo.'/\',\''.$arf.'\')" type="button" class="btn "> <i class="material-icons">&#xe872;</i></button>
-								<a href="/editar?edit=/Posts/'.$arquivo.'/'.$arL.'">
+								<a href="/editar?edit=Posts/'.$arquivo.'/'.$arL.'">
 									<button type="button" class="btn "><i class="material-icons">&#xe3c9;</i></button>
 								</a>	
 							 </div> 
 							 <div class="tdTAb"><a  class="" href="/url/'.$arquivo.'/'.$arL.'/">'.$arf.'</a></div>
-							 </td>
-							 
+							 </td>							 
 							</tr>
-							
                             ';		
-					} //Assets/php/ApagarArquivo.php?arquivo=&dir=
-					//onclick="ApagarArquvs(\''.$arL.'.php\',\'Posts/'.$arquivo.'/\', \''.$arf.'\')"
+					} 
 				}			
 			$dirr -> close();
 			}else{
 				echo '
-				<tbody>
-				<tr>
+				<tbody><tr>
 				 <td>Nada aqui</td>
-				</tr>
-				</tbody>';					
+				</tr></tbody>';					
 			}
 			echo '  
 			</tbody> 
-					</table>
-				</div>
-			</div>
-		</div>';
+			</table>
+			</div></div></div>';
 		}
 		$i++;
 		}
@@ -78,7 +71,6 @@ function pastasMissa(){
                     url: 'Assets/php/ApagarArquivo.php'+ItemApagar,
                     type: 'GET',
                     success: function(data) {
-						//$('#divtesr').html(data);
                      divDE2();
                     }
                 });
@@ -87,22 +79,5 @@ function pastasMissa(){
             alert("Cancelado pelo usuário!");
         }
     }
-/*
-function ApagarArquvs(ItemApagar,dir, NameRq){
-        var resultado = confirm("Deseja excluir o item: "+NameRq+" ?");
-        if (resultado == true) {
-          $.ajax({
-                    url: 'Assets/php/ApagarArquivo.php?arquivo='+ItemApagar+'&dir='+dir,
-                    type: 'GET',
-                    success: function(data) {
-                    divDE2();
-                    }
-                });
-        }
-        else{
-            alert("Cancelado pelo usuário!");
-        }
-    }*/
-	
 </script>
 

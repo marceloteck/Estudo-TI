@@ -16,6 +16,8 @@
             <form action="#" class="container-fluid" >
             <button onclick="clikButton('enviarForm1')" type="button"  style="width:100%;" name="click1" class="btn btn-primary">Criar</button>
             <br> <br>
+            <button onclick="" type="button"  style="width:100%;" name="click1" class="btn btn-secondary">Pré-visualizar</button>
+            <br> <br>
                 <label for="inputState" class="form-label">Salvar: &nbsp; 
                 <button class="tbNT" type="button" onclick="selectJs()">  
                     <i class="material-icons">&#xe5d5;</i> 
@@ -26,14 +28,17 @@
             </label>
                 <div id="selectAtive"></div>
                 <br />
-                <input  autocomplete="off" onkeyup="titleLink('#title1','#Link1'),CopiarText('#title1', '#Titulo01'),titleLink('#title1', '#Link01'),SelectValue('PastaOption0', 'selectDiv')"  type="text" id="title1" class="form-control" placeholder="Escreva o Link">
+                <input  autocomplete="off" onkeyup="titleLink('#title1','#Link1'),CopiarText('#title1', '#Titulo01'),titleLink('#title1', '#Link01'),SelectValue('PastaOption0', 'selectDiv')" value="<?=URL_UTIMA_Format?>"  type="text" id="title1" class="form-control" placeholder="Escreva o Link">
                 <br />
-                <input autocomplete="off" readonly style="display: block;" id="Link1"  type="text" class="form-control" placeholder="Link formatado">
+                <input autocomplete="off" readonly style="display: block;" value="<?=URL_UTIMA?>" id="Link1"  type="text" class="form-control" placeholder="Link formatado">
                 <br />
-
+ 
                 <button style="width:100%;"  type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Editar
                 </button>
+                <script>
+                  window.onload = titleLink('#title1','#Link1'),CopiarText('#title1', '#Titulo01'),titleLink('#title1', '#Link01'),SelectValue('PastaOption0', 'selectDiv');
+                </script>
 
 
 
@@ -44,29 +49,7 @@
 <!-- link para CSS e JS do SELECT com PESQUISA -->
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /><script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <!-- link para CSS e JS do SELECT com PESQUISA -->
- <!-- #region  CSS do menu criar-->
- <style type="text/css">
-  .tbNT{
-  border: 0px;
-  background-color: #fff;
-  position: absolute;
-  margin-top:-10px;
-  float: left;
-}
-.tbNT2{
-  border: 0px;
-  background-color: #fff;
-  position: absolute;
-  margin-top:-10px;
-  float: right;
-  margin-left: 30px;
-}
-.modal a{
-        text-decoration: none;
-       
-    }
- </style>
- <!-- #region  CSS do menu criar-->
+
 <?php include INCLUDE_JS;?>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -106,7 +89,29 @@ divDE2();
 function divDE2(){IncludeJS('Assets/php/GerenciarPsts.php', '#divDE2');}
       </script>
 
-        <style>
+ <!-- #region  CSS do menu criar-->
+ <style type="text/css">
+  .tbNT{
+  border: 0px;
+  background-color: #fff;
+  position: absolute;
+  margin-top:-10px;
+  float: left;
+}
+.tbNT2{
+  border: 0px;
+  background-color: #fff;
+  position: absolute;
+  margin-top:-10px;
+  float: right;
+  margin-left: 30px;
+}
+.modal a{
+        text-decoration: none;
+       
+    }
+
+
             .confEdit{
                 position: relative;
                 float: left;
@@ -128,3 +133,4 @@ function divDE2(){IncludeJS('Assets/php/GerenciarPsts.php', '#divDE2');}
                 margin-left: 5px;
             }
         </style>
+ <!-- #region  CSS do menu criar-->
