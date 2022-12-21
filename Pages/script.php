@@ -9,7 +9,15 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <h1>APAGAR</h1>
+                               
+                            
+
+
+
+
+
+
+                            
                             </div>
                         </div>
                     </div>

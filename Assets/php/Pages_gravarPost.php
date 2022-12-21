@@ -15,7 +15,7 @@ if(isset($_POST['title']) or isset($_POST['link']) or isset($_POST['editor'])){
         if($rsutFnal == true){
           $renameOK = "Renomeado com Sucesso!";
         }else{
-          $renameOK = "N&atilde;o foi possivel renomear";
+          $renameOK = "";
         }
       }else{
         $renameOK = "";
@@ -57,7 +57,7 @@ if(isset($_POST['title']) or isset($_POST['link']) or isset($_POST['editor'])){
               </div>
             </div>
           </div>
-          <div style="display: block;"  id="MODALdiv-1" class="modal-backdrop fade show"></div>';
+          <div style="display: block;" onclick="hideNone(\'#MODALdiv\')" id="MODALdiv-1" class="modal-backdrop fade show"></div>';
         }else{
             echo '<div style="display: block;" class="modal fade show" id="MODALdiv" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  >
             <div class="modal-dialog">
@@ -77,7 +77,7 @@ if(isset($_POST['title']) or isset($_POST['link']) or isset($_POST['editor'])){
               </div>
             </div>
           </div>
-          <div style="display: block;"  id="MODALdiv-1" class="modal-backdrop fade show"></div>';
+          <div style="display: block;" onclick="hideNone(\'#MODALdiv\')"  id="MODALdiv-1" class="modal-backdrop fade show"></div>';
            }
         fclose($fp);
     }
@@ -102,7 +102,7 @@ if(isset($_POST['title']) or isset($_POST['link']) or isset($_POST['editor'])){
               </div>
             </div>
           </div>
-          <div style="display: block;"  id="MODALdiv-1" class="modal-backdrop fade show"></div>';
+          <div style="display: block;" onclick="hideNone(\'#MODALdiv\')" id="MODALdiv-1" class="modal-backdrop fade show"></div>';
        
     }
 }

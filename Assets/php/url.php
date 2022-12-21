@@ -65,8 +65,8 @@ function PagAtualLink($valor){
 		case 'editar':
 			return EDITAR_PAGES;
 			break;
-        case 'apagar':
-            return APAGAR_PAGES;
+        case 'script':
+            return SCRIPT_PAGES;
             break;
 		default:
 			return paginasWEb();
@@ -84,8 +84,8 @@ function MENUAtualLink($valor){
 		case 'editar':
 			return MENU_CRIAR_INCLD;
 			break;
-        case 'apagar':
-            return MENU_INICIO_INCLD;
+        case 'script':
+            return MENU_CRIAR_INCLD;
             break;
 		default:
 			return MENU_INICIO_INCLD;

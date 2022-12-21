@@ -8,12 +8,12 @@ if(isset($_GET['edit'])){
   $optionVals = '';
 }
 ?>
-<select onchange="SelectValue('PastaOption0', 'selectDiv'),IputNovaPasta('NovaPasta', '#PastaOption0', '#NvaPasta')" name="pastaativa" id="PastaOption0" class="form-control js-example-basic-multiple">
+<select style="width:100%" onchange="SelectValue('PastaOption0', 'selectDiv'),IputNovaPasta('NovaPasta', '#PastaOption0', '#NvaPasta')" name="pastaativa" id="PastaOption0" class="form-control js-example-basic-multiple">
 <?=$optionVals?>
 <?=BUSCPASTA?>
 <option value="NovaPasta">Criar Nova Pasta</option>
 </select>
-<input onchange="NvaPast()"  class="form-control Nvps" placeholder="Nova pasta" style="display: none;" type="text"  id="NvaPasta">
+<input onchange="NvaPast()"  class="form-control Nvps" placeholder="Nova pasta" style="display: none; width:100%" type="text"  id="NvaPasta">
 <div id="finalres"></div>
 <style>
     select:has(option[value="<?=URL_ANTERIO?>"]) {

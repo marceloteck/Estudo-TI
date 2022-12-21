@@ -10,18 +10,26 @@
         <i class="fas fa-fw fa-bars"></i>
         <span>Titulos e Link</span>
     </a>
-    <div id="collapseCriar" class="collapse show" aria-labelledby="headingcriar" data-parent="#accordionSidebar">
+    <div  id="collapseCriar" class="collapse show shadow" aria-labelledby="headingcriar" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Formulario:</h6>
             <form action="#" class="container-fluid" >
             <button onclick="clikButton('enviarForm1')" type="button"  style="width:100%;" name="click1" class="btn btn-primary">
-            <?php 
+            <?php /************************************* */
             if(EXPLODE_SELECAO == "editar"){ echo "Salvar"; }else{ echo "Criar";}
             ?>
             </button>
             <br> <br>
-            <button onclick="" type="button"  style="width:100%;" name="click1" class="btn btn-secondary">Pré-visualizar</button>
-            <br> <br>
+            <?php /************************************* */
+              if(isset($_GET['edit'])){
+                echo '<button onclick="preVisualizar()" type="button"  style="width:100%;" name="click1" class="btn btn-secondary"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">Pré-visualizar</button>
+                <br> <br>
+                ';
+              }else{
+                echo '';
+              }
+            ?>
+
                 <label for="inputState" class="form-label">Salvar: &nbsp; 
                 <button class="tbNT" type="button" onclick="selectJs()">  
                     <i class="material-icons">&#xe5d5;</i> 
@@ -32,9 +40,12 @@
             </label>
                 <div id="selectAtive"></div>
                 <br />
-                <input  autocomplete="off" onkeyup="titleLink('#title1','#Link1'),CopiarText('#title1', '#Titulo01'),titleLink('#title1', '#Link01'),SelectValue('PastaOption0', 'selectDiv')" value="<?=URL_UTIMA_Format?>"  type="text" id="title1" class="form-control" placeholder="Escreva o Link">
+                <?php /************************************* */
+                  if(isset($_GET['edit'])){$IptTitle = URL_UTIMA_Format; $IptLink = URL_UTIMA;}else{$IptTitle = ''; $IptLink = '';}
+                 ?>
+                <input onblur="widthDiv('#collapseCriar', '')" onfocus="widthDiv('#collapseCriar', '400px')"  autocomplete="off" onkeyup="titleLink('#title1','#Link1'),CopiarText('#title1', '#Titulo01'),titleLink('#title1', '#Link01'),SelectValue('PastaOption0', 'selectDiv')" value="<?=$IptTitle?>"  type="text" id="title1" class="form-control" placeholder="Escreva o Link">
                 <br />
-                <input autocomplete="off" readonly style="display: block;" value="<?=URL_UTIMA?>" id="Link1"  type="text" class="form-control" placeholder="Link formatado">
+                <input onblur="widthDiv('#collapseCriar', '')" onfocus="widthDiv('#collapseCriar', '400px')" autocomplete="off" readonly style="display: block;" value="<?=$IptLink?>" id="Link1"  type="text" class="form-control" placeholder="Link formatado">
                 <br />
  
                 <button style="width:100%;"  type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -44,8 +55,17 @@
                   window.onload = titleLink('#title1','#Link1'),CopiarText('#title1', '#Titulo01'),titleLink('#title1', '#Link01'),SelectValue('PastaOption0', 'selectDiv');
                 </script>
 
-
-
+              <script>
+              function widthDiv(IDDv, tmnho){
+                var IDDIV = document.querySelector(IDDv);
+                IDDIV.style.width = tmnho;
+              }
+            </script>
+                     
+            
+<!--
+#region
+-->
             </form>
         </div>
     </div>
@@ -138,3 +158,36 @@ function divDE2(){IncludeJS('Assets/php/GerenciarPsts.php', '#divDE2');}
             }
         </style>
  <!-- #region  CSS do menu criar-->
+ <!--
+#endregion
+ -->
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel"><div id="TITLE_posts"></div></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div id="TEXTO_posts"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function preVisualizar(){
+    var TITLE_posts = document.querySelector('#title1').value;
+    var TEXT_posts = document.querySelector('#editor').value;
+    document.querySelector('#TITLE_posts').innerHTML = TITLE_posts;
+    document.querySelector('#TEXTO_posts').innerHTML = TEXT_posts;
+    
+  }
+</script>

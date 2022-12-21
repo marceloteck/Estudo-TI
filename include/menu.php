@@ -40,8 +40,7 @@
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Navegação:</h6>
             <a class="collapse-item" href="/criar">Criar</a>
-            <a class="collapse-item" href="/editar">Editar</a>
-            <a class="collapse-item" href="/apagar">Apagar</a>
+            <a class="collapse-item" href="/script">Editor Script</a>
         </div>
     </div>
 </li>
