@@ -27,17 +27,42 @@
 
                             <div id="controls">
                                 <!-- <a class="button together button-on" onclick="TogetherJS(this); return false;" title="toggle collaboration"></a> -->
-                                <a href="#" class="button lights" title="toggle the lights"></a>
+                                
+                                <!-- <a href="#" class="bnt  lights" title="toggle the lights"><i class="material-icons">&#xe2cc;</i></a> -->
+                               <a href="#" class="" title="toggle the lights"><i class="material-icons">&#xe2cc;</i></a> 
                             </div>
 
                             <textarea id="html">HTML</textarea>
                             <textarea id="css">CSS</textarea>
                             <textarea id="js">JS</textarea>
 
-                            <div id="frame" class="cm-s-default frame">
+                          <!--  <div id="frame" class="cm-s-default frame">
+                                <iframe id="preview"></iframe>
+                            </div>-->
+
+                            <div id="MstrarDiv" class="cm-s-default frame MstrarDiv">
                                 <iframe id="preview"></iframe>
                             </div>
-
+                            <script>
+                               document.getElementById('MstrarDiv').style.border = "solid 1px #ccc";
+                               document.getElementById('html').style.border = "solid 1px #ccc";
+                            </script>
+    <style>
+        textarea{
+            border: #ccc;
+        }
+        .MstrarDiv{
+            float: right;
+            width: 40%;
+            min-height: 150vh;
+            top: 75px;
+            position: absolute;
+            right: 10px;
+            color: #fff;
+            border-radius: 0.2em;
+           
+        }
+    </style>
 
 
 
