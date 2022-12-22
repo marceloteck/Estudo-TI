@@ -1,3 +1,14 @@
+                <!--<link rel="stylesheet" href="./Assets/editorHtml/css/reset.css" type="text/css">-->  
+                <link rel="stylesheet" href="./Assets/editorHtml/css/style.css" type="text/css">
+                <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+                <script src="./Assets/editorHtml/js/vendor/codemirror.js"></script>
+                <script src="./Assets/editorHtml/js/vendor/css.js"></script>
+                <script src="./Assets/editorHtml/js/vendor/htmlmixed.js"></script>
+                <script src="./Assets/editorHtml/js/vendor/xml.js"></script>
+                <script src="./Assets/editorHtml/js/vendor/javascript.js"></script>
+                <script src="./Assets/editorHtml/js/vendor/jquery.js"></script>
+                <script src="./Assets/editorHtml/js/vendor/jquery-ui.js"></script>
+                <script src="./Assets/editorHtml/js/app.js"></script>
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
@@ -10,12 +21,12 @@
                         <div class="card-body">
                             <div class="table-responsive">
 
-                            <form action="#" method="Post">
+                    <form action="#" method="Post">
               
 
                             <!-- itens ocultos para envio de formulario -->
                             <button id="enviarForm1" type="submit"  style="width:100%; display:none;" name="button2" class="btn btn-primary">Enviar</button> 
-                        <?php include PHP_GRAVAR_POST; ?>
+                            <?php include PHP_GRAVAR_SCRIPT; ?>
                             <input  autocomplete="off" style="display: none;" name="title" value=""  type="text" id="Titulo01" class="form-control" placeholder="Escreva o Link">
                             <input autocomplete="off" style="display: none;" id="Link01"  value="" name="link"  type="text" class="form-control" placeholder="Link formatado">
                             <input autocomplete="off" style="display: none;" id="selectDiv" name="select"  type="text" class="form-control" placeholder="select">
@@ -23,19 +34,6 @@
 
                              <!--------------------------------------------------->  
                              
-                             <!--<link rel="stylesheet" href="./Assets/editorHtml/css/reset.css" type="text/css">-->  
-                            <link rel="stylesheet" href="./Assets/editorHtml/css/style.css" type="text/css">
-                            <script src="https://cdn.firebase.com/v0/firebase.js"></script>
-                            <script src="./Assets/editorHtml/js/vendor/codemirror.js"></script>
-                            <script src="./Assets/editorHtml/js/vendor/css.js"></script>
-                            <script src="./Assets/editorHtml/js/vendor/htmlmixed.js"></script>
-                            <script src="./Assets/editorHtml/js/vendor/xml.js"></script>
-                            <script src="./Assets/editorHtml/js/vendor/javascript.js"></script>
-                            <script src="./Assets/editorHtml/js/vendor/jquery.js"></script>
-                            <script src="./Assets/editorHtml/js/vendor/jquery-ui.js"></script>
-
-                            <script src="./Assets/editorHtml/js/app.js"></script>
-                    
 
                             <div id="controls">
                                 <!-- <a class="button together button-on" onclick="TogetherJS(this); return false;" title="toggle collaboration"></a> -->
@@ -59,6 +57,7 @@
                             <script>
                               
                             </script>
+                     </form>
     <style>
         textarea{
             border: #ccc;

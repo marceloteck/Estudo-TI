@@ -85,7 +85,7 @@ function MENUAtualLink($valor){
 			return MENU_CRIAR_INCLD;
 			break;
         case 'script':
-            return MENU_CRIAR_INCLD;
+            return MENU_CRIAR_SCRIPT_INCLD;
             break;
 		default:
 			return MENU_INICIO_INCLD;

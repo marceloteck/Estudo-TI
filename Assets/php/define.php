@@ -32,6 +32,9 @@ define('MENU_CRIAR_INCLD', 'include/menu_criar.php');
 define('MENU_EDITAR_INCLD', 'include/menu_editar.php');
 define('TOPBAR_INCLD', 'include/TopBar.php');
 
+
+define('MENU_CRIAR_SCRIPT_INCLD', 'include/menu_criar_script.php');
+
 //PAGES
 define('INICIO_PAGES', 'Pages/inicio.php');
 define('CRIAR_PAGES', 'Pages/criar.php');
@@ -41,8 +44,11 @@ define('POST_PAGES', 'Pages/posts.php');
 define('LOGIN_PAGES', 'Pages/login.php');
 define('ERROR404', 'Pages/404.php');
 
+
+
 //ASSETs PHP
 define('PHP_GRAVAR_POST', 'Assets/php/Pages_gravarPost.php');
+define('PHP_GRAVAR_SCRIPT', 'Assets/php/Pages_gravarPostScript.php');
 
 //ASSETs JAVASCRIPT
 define('INCLUDE_JS', 'Assets/js/include_JS.php');
