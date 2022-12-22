@@ -38,8 +38,10 @@
                             <div id="controls">
                                 <!-- <a class="button together button-on" onclick="TogetherJS(this); return false;" title="toggle collaboration"></a> -->
                                 
-                                <!-- <a href="#" class="bnt  lights" title="toggle the lights"><i class="material-icons">&#xe2cc;</i></a> -->
-                               <a href="#" class="" title="toggle the lights"><i class="material-icons">&#xe2cc;</i></a> 
+                                <a href="#"  class="bnt  lights" title="toggle the lights"><i class="material-icons">&#xe1ae;</i></a>
+
+                                
+                               <!-- <a href="#" class="" title="toggle the lights"><i class="material-icons">&#xe2cc;</i></a>  -->
                             </div>
 
                             
@@ -72,6 +74,10 @@
             color: #fff;
             border-radius: 0.2em;
            
+        }
+        .MstrarDiv iframe{
+            width: 100%;
+            height: 100vh;
         }
     </style>
 

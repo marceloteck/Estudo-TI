@@ -177,11 +177,51 @@ $(function() {
 
   /*==========  STYLING & DYNAMIC BOX SIZING  ==========*/
 
-  $('.lights').click(function(el) {
-    el.preventDefault();
-    $('.cm-s-default').toggleClass('cm-s-monokai');
-    $(this).toggleClass('button-on');
-  }).click();
+$('.lights').click(function(el) {
+  $('.cm-s-default').toggleClass('cm-s-monokai');
+//cookie//***************** 
+    var x_cookie = document.cookie;
+    var resltc = x_cookie.split('Script_lights=');
+    var resltc1 = resltc[1];
+     if(!resltc1){
+      document.cookie = 'Script_lights=Escuro';
+    }else if(resltc1 == "Claro"){
+      document.cookie = 'Script_lights=Escuro';
+    }else if(resltc1 == "Escuro"){
+      document.cookie = 'Script_lights=Claro';
+    }
+//cookie//***************** 
+  });
+  $(function(el) {
+   var x_cookie = document.cookie;
+   var resltc = x_cookie.split('Script_lights=');
+   var resltc1 = resltc[1];
+   if(resltc1 == "Escuro"){
+    $('.cm-s-default').addClass("cm-s-monokai");
+   }
+    }).click();
+
+
+
+  //#region  salvo 
+ /* $('.lights').click(function(el) {
+    //el.preventDefault();
+    //$('.cm-s-default').toggleClass('cm-s-monokai');
+    //$(this).toggleClass('button-on');
+
+//cookie//***************** 
+    document.cookie = 'Script_lights=Claro';
+    var x_cookie = document.cookie;
+    var resltc = x_cookie.split('Script_lights=');
+    resltc = resltc[1];
+    resltc = resltc.split(';');
+    resltc = resltc[0]
+
+    //alert(resltc)
+//cookie//***************** 
+
+  }).click();*/
+//#endregion
 
   $('.together').click(function(el) {
     el.preventDefault();
