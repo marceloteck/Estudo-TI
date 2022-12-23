@@ -38,10 +38,7 @@
                 <i class="material-icons">&#xe2cc;</i>
                 </button>
             </label>
-                <!--<div id="selectAtive"></div>-->
-                
-                <input type="text" name="pastaativa" class="form-control" placeholder="pasta">
-
+                <div id="selectAtiveScript"></div>
                 <br />
                 <?php /************************************* */
                   if(isset($_GET['edit'])){$IptTitle = URL_UTIMA_Format; $IptLink = URL_UTIMA;}else{$IptTitle = ''; $IptLink = '';}

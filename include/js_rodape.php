@@ -53,6 +53,14 @@ function NvaPast(){
     IncludeJS('Assets/php/CriarPasta.php?past='+IDnv, '#finalres');
     selectJs(); 
 }
+function NvaPastScript(){
+    var IDnv  = document.querySelector('#NvaPasta').value;
+    IncludeJS('Assets/php/CriarPasta.php?pastscript='+IDnv, '#finalres');
+    selectJs(); 
+}
+
+
+
 //selecionar um valor do select pelo botão
 function ValueNpst(IdInput){
     var text = 'NovaPasta';

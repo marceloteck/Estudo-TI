@@ -23,6 +23,7 @@
     window.onload = selectJs();
     function selectJs(){ 
         IncludeJS('Assets/html/select_php.php<?=GET_EDIT?>', '#selectAtive');
+        IncludeJS('Assets/html/select_phpScript.php<?=GET_EDIT?>', '#selectAtiveScript');
         $('#PastaOption0').select2();   
     }
     function teste(){ 

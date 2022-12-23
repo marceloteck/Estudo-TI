@@ -2,6 +2,7 @@
 require_once 'conf.php';
 // DEFINE LOCAL
 define('BUSCPASTA', buscarPastaIndex("../../Posts"));
+define('BUSCPASTA_SCRIPT', buscarPastaIndex("../../Scripts"));
 
 //FUNÇÕES PHP
 function buscarPastaIndex($pastaLc){

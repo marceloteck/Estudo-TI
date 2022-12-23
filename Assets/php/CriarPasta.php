@@ -1,6 +1,7 @@
 <?php
 require_once 'conf.php';
 $gtPast = $_GET['past'];
+$gtPastScript = $_GET['pastscript'];
 function CriarPast($NamePast, $LocalPast){
     $novapasta = str_replace(" ", "_", $NamePast);
 	$novapasta = strtolower($novapasta);
@@ -50,5 +51,9 @@ function CriarPast($NamePast, $LocalPast){
 }
 if($gtPast != ""){
    CriarPast($gtPast, '../../Posts/');
+}else if($gtPastScript != ""){
+  CriarPast($gtPastScript, '../../Scripts/');
 }
+
+
 ?>
