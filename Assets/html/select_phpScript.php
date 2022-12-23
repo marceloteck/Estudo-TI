@@ -14,7 +14,7 @@ if(isset($_GET['edit'])){
 <option value="NovaPasta">Criar Nova Pasta</option>
 </select>
 <input onchange="NvaPastScript()"  class="form-control Nvps" placeholder="Nova pasta" style="display: none; width:100%" type="text"  id="NvaPasta">
-<div id="finalres"></div>
+<div id="finalres2"></div>
 <style>
     select:has(option[value="<?=URL_ANTERIO?>"]) {
   color: #BD5B46;

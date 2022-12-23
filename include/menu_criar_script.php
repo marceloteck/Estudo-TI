@@ -48,7 +48,7 @@
                 <input onblur="widthDiv('#collapseCriar', '')" onfocus="widthDiv('#collapseCriar', '400px')" autocomplete="off" readonly style="display: block;" value="<?=$IptLink?>" id="Link1"  type="text" class="form-control" placeholder="Link formatado">
                 <br />
  
-                <button style="width:100%;"  type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button style="width:100%;"  type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#EditarScript">
                 Editar
                 </button>
                 <script>
@@ -76,11 +76,11 @@
 
 <?php include INCLUDE_JS;?>
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="EditarScript" tabindex="-1" aria-labelledby="EditarScriptLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="fs-5" id="exampleModalLabel">GERENCIAR SEUS POSTs</h1> 
+        <h1 class="fs-5" id="EditarScriptLabel">GERENCIAR SEUS SCRIPTs</h1> 
 	    <div style="float: right; position: absolute; right: 50px;" class="bm-4"><input class="form-control" onkeyup="pesquisa()" type="text" placeholder="Buscar..." id="searchBsc"/>
         </div>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -110,7 +110,7 @@
 				});
 }
 divDE2();
-function divDE2(){IncludeJS('Assets/php/GerenciarPsts.php', '#divDE2');}
+function divDE2(){IncludeJS('Assets/php/GerenciaScrpt.php', '#divDE2');}
       </script>
 
  <!-- #region  CSS do menu criar-->

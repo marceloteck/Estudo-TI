@@ -8,7 +8,7 @@ function CriarPast($NamePast, $LocalPast){
     $novapasta = $LocalPast.$novapasta;
     $resultado = mkdir( $novapasta , 0755, true);
     if($resultado){
-        echo '<div style="display: block;" class="modal fade show" id="MODALdiv" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  >
+        echo '<div style="display: block; z-index:99999999999;" class="modal fade show" id="MODALdiv" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  >
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
@@ -28,7 +28,7 @@ function CriarPast($NamePast, $LocalPast){
           </div>
           <div style="display: block;"  id="MODALdiv-1" class="modal-backdrop fade show"></div>';
 		}else{
-            echo '<div style="display: block;" class="modal fade show" id="MODALdiv" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  >
+            echo '<div style="display: block; z-index:99999999999;" class="modal fade show" id="MODALdiv" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  >
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
