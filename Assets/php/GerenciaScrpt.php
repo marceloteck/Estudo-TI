@@ -14,8 +14,12 @@ function pastasMissa(){
 						  <table class="shadow table table-borderless border-top" id="" width="100%" cellspacing="0">			
                                     <thead>
                                         <tr>
-                                            <th><div class="confEdit"><button onclick="ApagarArquvs(\'?DirDel=Scripts/'.$arquivo.'\',\''.$arquivo.'\')" type="button" class="btn btn-circle btn-sm "> <i class="material-icons">&#xe872;</i></button></div>  # '.$arquivo.'
-											
+                                            <th><div class="confEdit"><button onclick="ApagarArquvs(\'?DirDel=Scripts/'.$arquivo.'\',\''.$arquivo.'\')" type="button" class="btn btn-circle btn-sm "> <i class="material-icons">&#xe872;</i></button> #</div> <div style="display:none;">'.$arquivo.'</div>  <input  onchange="Renmar(\'#Rname'.$i.'\'),renomPst(\''.$arquivo.'\',this.value)" autocomplete="off" id="Rname'.$i.'"  value="'.$arquivo.'" name="rname'.$i.'"  type="text" class="EditRname" readonly> 
+											<script>
+												$("#Rname'.$i.'").on(\'dblclick\', function() {
+												$(\'input[name="rname'.$i.'"]\').removeAttr(\'readonly\');
+												});
+												</script>
 											</th>
                                         </tr>
                                     </thead>
@@ -64,6 +68,9 @@ function pastasMissa(){
 		pastasMissa();
     ?>
 <script>
+
+
+
     function ApagarArquvs(ItemApagar,NameRq){
         var resultado = confirm("Deseja excluir o item: "+NameRq+" ?");
         if (resultado == true) {
@@ -72,6 +79,7 @@ function pastasMissa(){
                     type: 'GET',
                     success: function(data) {
                      divDE2();
+					 selectJsScript();
                     }
                 });
         }
@@ -83,15 +91,19 @@ function pastasMissa(){
 function renomPst(dirpstAntg, dirpstNv){
 	
           $.ajax({
-                    url: 'Assets/php/RenomearPasta.php?antigo='+dirpstAntg+'$novo='+dirpstNv,
+                    url: 'Assets/php/RenomearPasta.php?antigo='+dirpstAntg+'&novo='+dirpstNv,
                     type: 'GET',
                     success: function(data) {
                      divDE2();
+					 selectJsScript();
                     }
                 });
         }
         
 
+function Renmar(idDv){
+const input = document.querySelector(idDv)
+input.setAttribute("readonly", true)
+}
 
 </script>
-

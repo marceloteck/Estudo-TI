@@ -43,12 +43,12 @@
                 <?php /************************************* */
                   if(isset($_GET['edit'])){$IptTitle = URL_UTIMA_Format; $IptLink = URL_UTIMA;}else{$IptTitle = ''; $IptLink = '';}
                  ?>
-                <input onblur="widthDiv('#collapseCriar', '')" onfocus="widthDiv('#collapseCriar', '400px')"  autocomplete="off" onkeyup="titleLink('#title1','#Link1'),CopiarText('#title1', '#Titulo01'),titleLink('#title1', '#Link01'),SelectValue('PastaOption0', 'selectDiv')" value="<?=$IptTitle?>"  type="text" id="title1" class="form-control" placeholder="Escreva o Link">
+                <input  onblur="widthDiv('#collapseCriar', '')" onfocus="widthDiv('#collapseCriar', '400px')"  autocomplete="off" onkeyup="titleLink('#title1','#Link1'),CopiarText('#title1', '#Titulo01'),titleLink('#title1', '#Link01'),SelectValue('PastaOption0', 'selectDiv')" value="<?=$IptTitle?>"  type="text" id="title1" class="form-control" placeholder="Escreva o Link">
                 <br />
                 <input onblur="widthDiv('#collapseCriar', '')" onfocus="widthDiv('#collapseCriar', '400px')" autocomplete="off" readonly style="display: block;" value="<?=$IptLink?>" id="Link1"  type="text" class="form-control" placeholder="Link formatado">
                 <br />
  
-                <button style="width:100%;"  type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#EditarScript">
+                <button onclick="divDE2()" style="width:100%;"  type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#EditarScript">
                 Editar
                 </button>
                 <script>
@@ -110,7 +110,10 @@
 				});
 }
 divDE2();
-function divDE2(){IncludeJS('Assets/php/GerenciaScrpt.php', '#divDE2');}
+function divDE2(){
+  IncludeJS('Assets/php/GerenciaScrpt.php', '#divDE2');
+  //alert('sa');
+}
       </script>
 
  <!-- #region  CSS do menu criar-->
@@ -140,6 +143,7 @@ function divDE2(){IncludeJS('Assets/php/GerenciaScrpt.php', '#divDE2');}
                 position: relative;
                 float: left;
                 padding: 0px;
+                margin-top: 5px;
             }
             .confEdit button{
                 margin-right:0px;
@@ -156,6 +160,25 @@ function divDE2(){IncludeJS('Assets/php/GerenciaScrpt.php', '#divDE2');}
                 min-width: 20%;
                 margin-left: 5px;
             }
+
+            
+.EditRname{
+  min-width: 40%;
+  position:relative;
+  float:left;
+  display: block;
+  padding: 0.375rem 0.75rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0px;
+  margin: 0;
+    font-family: inherit;
+
+}
         </style>
  <!-- #region  CSS do menu criar-->
  <!--

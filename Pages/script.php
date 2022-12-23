@@ -16,7 +16,7 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Centro de Leitura</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Editor Online</h6>
 
                             <div id="controls">
                                 <a onclick="expandirDiv('#MstrarDiv')" class="bnt lights"><i class="material-icons">&#xe31f;</i></a>
@@ -66,6 +66,7 @@
                                         
                                     }
                                 </script>
+                                
     <style>
 .SIze98{
 width: 98% !important;
