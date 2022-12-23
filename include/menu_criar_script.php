@@ -31,7 +31,7 @@
             ?>
 
                 <label for="inputState" class="form-label">Salvar: &nbsp; 
-                <button class="tbNT" type="button" onclick="selectJs()">  
+                <button class="tbNT" type="button" onclick="selectJsScript()">  
                     <i class="material-icons">&#xe5d5;</i> 
                 </button>
                 <button class="tbNT2" type="button" onclick="ValueNpst('#PastaOption0')">  

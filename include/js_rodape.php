@@ -56,7 +56,7 @@ function NvaPast(){
 function NvaPastScript(){
     var IDnv  = document.querySelector('#NvaPasta').value;
     IncludeJS('Assets/php/CriarPasta.php?pastscript='+IDnv, '#finalres');
-    selectJs(); 
+    selectJsScript(); 
 }
 
 

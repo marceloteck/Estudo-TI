@@ -23,3 +23,4 @@ if(isset($_GET['edit'])){
 <script>
     window.onload = SelectValue('PastaOption0', 'selectDiv'),IputNovaPasta('NovaPasta', '#PastaOption0', '#NvaPasta');
 </script>
+

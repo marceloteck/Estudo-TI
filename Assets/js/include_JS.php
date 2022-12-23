@@ -21,11 +21,17 @@
             ?>
     //Includes ATIVOS
     window.onload = selectJs();
+    window.onload = selectJsScript();
     function selectJs(){ 
         IncludeJS('Assets/html/select_php.php<?=GET_EDIT?>', '#selectAtive');
+        $('#PastaOption0').select2();   
+    }
+    function selectJsScript(){ 
         IncludeJS('Assets/html/select_phpScript.php<?=GET_EDIT?>', '#selectAtiveScript');
         $('#PastaOption0').select2();   
     }
+
+
     function teste(){ 
         alert('teste');
     }
