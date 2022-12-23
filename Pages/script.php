@@ -17,6 +17,14 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Centro de Leitura</h6>
+
+                            <div id="controls">
+                                <a onclick="expandirDiv('#MstrarDiv')" class="bnt lights"><i class="material-icons">&#xe31f;</i></a>
+                                
+                                
+                                <a href="#"  class="bnt  lights" title="toggle the lights"><i class="material-icons">&#xe1ae;</i></a>
+                            </div>
+
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -34,20 +42,9 @@
 
                              <!--------------------------------------------------->  
                              
-
-                            <div id="controls">
-                                <!-- <a class="button together button-on" onclick="TogetherJS(this); return false;" title="toggle collaboration"></a> -->
-                                
-                                <a href="#"  class="bnt  lights" title="toggle the lights"><i class="material-icons">&#xe1ae;</i></a>
-
-                                
-                               <!-- <a href="#" class="" title="toggle the lights"><i class="material-icons">&#xe2cc;</i></a>  -->
-                            </div>
-
-                            
-                            <textarea id="html">HTML</textarea>
-                            <textarea id="css">CSS</textarea>
-                            <textarea id="js">JS</textarea>
+                            <textarea style="display: none;" id="html"><!-- HTML --></textarea>
+                            <textarea style="display: none;" id="css">/* CSS */</textarea>
+                            <textarea style="display: none;" id="js">// JavaScript & jQuery</textarea>
 
                           <!--  <div id="frame" class="cm-s-default frame">
                                 <iframe id="preview"></iframe>
@@ -60,19 +57,36 @@
                               
                             </script>
                      </form>
+
+                     <script>
+                                    function expandirDiv(idDV){
+                                        var divE = document.querySelector(idDV);
+                                        //$(idDV).ToggleClass("SIze98");
+                                        divE.classList.toggle('SIze98');
+                                        
+                                    }
+                                </script>
     <style>
+.SIze98{
+width: 98% !important;
+z-index: 99;
+background-color: #fff;
+                                        
+}
+
         textarea{
             border: #ccc;
         }
         .MstrarDiv{
             float: right;
-            width: 40%;
+            width: 38%;
             min-height: 150vh;
             top: 75px;
             position: absolute;
             right: 10px;
             color: #fff;
             border-radius: 0.2em;
+        
            
         }
         .MstrarDiv iframe{

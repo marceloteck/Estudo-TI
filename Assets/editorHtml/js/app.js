@@ -100,7 +100,7 @@ $(function() {
     };
 
     // Helper function (for demo) for resetting editors, once every hour
-    setInterval(reset, 3600000);
+   // setInterval(reset, 3600000);
 
     return '<link rel="stylesheet" href="http://raw.github.com/necolas/normalize.css/master/normalize.css" type="text/css">'
       + '<style>'
@@ -169,10 +169,14 @@ $(function() {
       preview.close();
     };
 
-    delay = setTimeout(update, 500);
+    delay = setTimeout(update, 50);
   }
 
-  setInterval(updatePreview, 1000);
+  htmlBox.onkeyup = updatePreview;
+  cssBox.onkeyup = updatePreview;
+  jsBox.onkeyup = updatePreview;
+         
+  //setInterval(updatePreview, 0);
 
 
   /*==========  STYLING & DYNAMIC BOX SIZING  ==========*/
@@ -188,7 +192,7 @@ $('.lights').click(function(el) {
     }else if(resltc1 == "Claro"){
       document.cookie = 'Script_lights=Escuro';
     }else if(resltc1 == "Escuro"){
-      document.cookie = 'Script_lights=Claro';
+      document.cookie = 'Script_lights=Claro';      
     }
 //cookie//***************** 
   });
