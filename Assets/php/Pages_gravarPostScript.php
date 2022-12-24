@@ -2,15 +2,28 @@
 if(isset($_POST['title']) or isset($_POST['link'])){
     define('TITULO_SCRIPT',$_POST['title']);
     define('LINK_SCRIPT',$_POST['link']);
-    define('HTML_SCRIPT',$_POST['html']);
-    define('CSS_SCRIPT',$_POST['css']);
-    define('JS_SCRIPT',$_POST['js']);
+    define('HTML_PHP_COD',str_replace('<!-- HTML  ou PHP -->','', $_POST['html']));
+    define('CSS_CODE',str_replace('/* CSS */','', $_POST['css']));
+    define('JS_CODE',str_replace('// JavaScript & jQuery','', $_POST['js']));
     define('PASTA_SCRIPT',$_POST['select']);
+  
+    if (HTML_PHP_COD != "") {
+      define('HTML_SCRIPT', HTML_PHP_COD);
+    }else{
+      define('HTML_SCRIPT', '');
+    }
+    if(JS_CODE != ""){
+    define('JS_SCRIPT', '<script> '.JS_CODE.' </script>');    
+    }else{
+      define('JS_SCRIPT', ''); 
+    }
+    if(CSS_CODE != ""){
+      define('CSS_SCRIPT', '<style> '.CSS_CODE.' </style>');    
+      }else{
+        define('CSS_SCRIPT', ''); 
+      }
 
-    define('EDITOR_SCRIPT', '<style>'.CSS_SCRIPT.'</style> \r\n '.HTML_SCRIPT.'<script>'.JS_SCRIPT.'</script>');
-
-    
-
+    define('EDITOR_SCRIPT', CSS_SCRIPT.HTML_SCRIPT.JS_SCRIPT);
     function CriarArquivo(){
       if(LINK_SCRIPT != URL_UTIMA){
         $NameAtg = './Scripts/'.PASTA_SCRIPT.'/'.URL_UTIMA.'.php';
@@ -46,7 +59,7 @@ if(isset($_POST['title']) or isset($_POST['link'])){
               <div class="modal-content">
                 <div class="modal-header">
                   <h1 class="fs-5" id=""><i class="fas fa-exclamation-triangle"></i> Aviso</h1>
-                  <button onclick="hideNone(\'#MODALdiv\'),RedirectUrl(\''.$Linknv.'\')" type="button" class="btn-close"></button>
+                  <button onclick="hideNone(\'#MODALdiv\')" type="button" class="btn-close"></button>
                 </div>
                 <div class="modal-body">
                  <div id="AvsAlert1"><i class="fas fa-info-circle"></i> Arquivo enviado com <strong>Sucesso!</strong> 
@@ -55,7 +68,7 @@ if(isset($_POST['title']) or isset($_POST['link'])){
                  </div>
                  </div>
                 <div class="modal-footer">
-                  <button onclick="hideNone(\'#MODALdiv\'),RedirectUrl(\''.$Linknv.'\')" type="button" class="btn btn-secondary">Fechar</button>
+                  <button onclick="hideNone(\'#MODALdiv\')" type="button" class="btn btn-secondary">Fechar</button>
                   
                 </div>
               </div>

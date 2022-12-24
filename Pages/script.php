@@ -18,6 +18,8 @@
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Editor Online</h6>
 
+                           
+
                             <div id="controls">
                                 <a onclick="expandirDiv('#MstrarDiv')" class="bnt lights"><i class="material-icons">&#xe31f;</i></a>
                                 
@@ -29,22 +31,29 @@
                         <div class="card-body">
                             <div class="table-responsive">
 
+                          
                     <form action="#" method="Post">
               
 
                             <!-- itens ocultos para envio de formulario -->
                             <button id="enviarForm1" type="submit"  style="width:100%; display:none;" name="button2" class="btn btn-primary">Enviar</button> 
-                            <?php include PHP_GRAVAR_SCRIPT; ?>
+                            <?php
+                             include PHP_GRAVAR_SCRIPT; 
+                            ?>
                             <input  autocomplete="off" style="display: none;" name="title" value=""  type="text" id="Titulo01" class="form-control" placeholder="Escreva o Link">
                             <input autocomplete="off" style="display: none;" id="Link01"  value="" name="link"  type="text" class="form-control" placeholder="Link formatado">
                             <input autocomplete="off" style="display: none;" id="selectDiv" name="select"  type="text" class="form-control" placeholder="select">
                             <!-- itens ocultos para envio de formulario -->
 
                              <!--------------------------------------------------->  
-                             
-                            <textarea style="display: none;" id="html" name="html"><!-- HTML --></textarea>
+                        <div id="cnthtml">
+                            <textarea style="display: none;" id="html" name="html"><!-- HTML  ou PHP --></textarea>
                             <textarea style="display: none;" id="css" name="css">/* CSS */</textarea>
                             <textarea style="display: none;" id="js" name="js">// JavaScript & jQuery</textarea>
+                        </div>
+              
+                     
+                           
 
                           <!--  <div id="frame" class="cm-s-default frame">
                                 <iframe id="preview"></iframe>

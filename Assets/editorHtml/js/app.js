@@ -164,9 +164,11 @@ $(function() {
     var update = function() {
       var previewFrame = document.getElementById('preview');
       var preview =  previewFrame.contentDocument ||  previewFrame.contentWindow.document;
+      
       preview.open();
       preview.write(getContent());
       preview.close();
+  
     };
 
     delay = setTimeout(update, 50);

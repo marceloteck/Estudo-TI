@@ -118,5 +118,47 @@ function ExplodeURL($buscaIn, $buscaFn, $N_in, $N_f, $URL)
  // print_r($buscando);
 }
 
+function my_file_get_contents( $site_url ){
+	$ch = curl_init();
+	$timeout = 5; // set to zero for no timeout
+	curl_setopt ($ch, CURLOPT_URL, $site_url);
+	curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+	ob_start();
+	curl_exec($ch);
+	curl_close($ch);
+	$file_contents = ob_get_contents();
+	ob_end_clean();
+	return $file_contents;
+	}
+
+	function ApiScript($Url, $tipo){ //tipo: css, js, html, php
+	$Script = my_file_get_contents($Url."?script=true");
+	switch ($tipo) {
+		case 'css':
+			$Script = explode('<style>', $Script);
+			$Script = explode('</style>', $Script[1]);
+			$Script = $Script[0];
+			$Script = "<style>" . $Script . "</style>";
+			return $Script;
+			break;
+		case 'js':
+			$Script = explode('<script>', $Script);
+			$Script = explode('</script>', $Script[1]);
+			$Script = $Script[0];
+			$Script = "<script>" . $Script . "</script>";
+			return $Script;
+			break;
+		case 'html':
+			$Script = explode('</style>', $Script);
+			$Script = explode('<script>', $Script[1]);
+			$Script = $Script[0];
+			return $Script;
+			break;
+		default:
+			return $Script;
+			break;
+        
+	}
+	}
 
 ?>
