@@ -42,9 +42,9 @@
 
                              <!--------------------------------------------------->  
                              
-                            <textarea style="display: none;" id="html"><!-- HTML --></textarea>
-                            <textarea style="display: none;" id="css">/* CSS */</textarea>
-                            <textarea style="display: none;" id="js">// JavaScript & jQuery</textarea>
+                            <textarea style="display: none;" id="html" name="html"><!-- HTML --></textarea>
+                            <textarea style="display: none;" id="css" name="css">/* CSS */</textarea>
+                            <textarea style="display: none;" id="js" name="js">// JavaScript & jQuery</textarea>
 
                           <!--  <div id="frame" class="cm-s-default frame">
                                 <iframe id="preview"></iframe>

@@ -2,8 +2,12 @@
 if(isset($_POST['title']) or isset($_POST['link'])){
     define('TITULO_SCRIPT',$_POST['title']);
     define('LINK_SCRIPT',$_POST['link']);
-    define('EDITOR_SCRIPT',$_POST['editor']);
+    define('HTML_SCRIPT',$_POST['html']);
+    define('CSS_SCRIPT',$_POST['css']);
+    define('JS_SCRIPT',$_POST['js']);
     define('PASTA_SCRIPT',$_POST['select']);
+
+    define('EDITOR_SCRIPT', '<style>'.CSS_SCRIPT.'</style> \r\n '.HTML_SCRIPT.'<script>'.JS_SCRIPT.'</script>');
 
     
 
