@@ -62,9 +62,7 @@
                             <div id="MstrarDiv" class="cm-s-default frame shadow MstrarDiv">
                                 <iframe id="preview"></iframe>
                             </div>
-                            <script>
-                              
-                            </script>
+                            
                      </form>
 
                      <script>

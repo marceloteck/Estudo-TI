@@ -100,6 +100,9 @@ function paginasWEb(){
 	$url = str_replace('/', '', $url[0]);
 	if(file_exists(PATH_pOST)){
 		return POST_PAGES;
+	}else if(file_exists(PATH_SCRIPT)){
+		return SCRIPT_POST_PAGES;
+		
 	}else{
 		return ERROR404;	
 	}

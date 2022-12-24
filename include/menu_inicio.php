@@ -19,3 +19,18 @@
     </div>
 </li>
 
+ <!-- Nav Item - Pages Collapse Menu -->
+ <li class="nav-item">
+    <!-- retirar o collapsed quando quiser deixar a mostra -->
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#TogleScrpt"
+        aria-expanded="true" aria-controls="TogleScrpt">
+        <i class="fas fa-fw fa-bars"></i>
+        <span>Cógigos Fontes</span>
+    </a>
+    <!-- colocar o show para mostrar -->
+    <div id="TogleScrpt" class="collapse  tooltip-demo" aria-labelledby="headingTree" data-parent="#accordionSidebar">
+    <?php include 'Assets/php/PastasDIR_SCRIPT.php'; ?>
+    </div>
+</li>
+
+

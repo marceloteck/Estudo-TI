@@ -11,7 +11,9 @@ define("URL_UTIMA_get", dividirUrl("?past=", 1, URL_COMPLETA));
 define("EDITAR_get", dividirUrl("?edit=", 1, URL_COMPLETA));
 define('PATH_pOST', './Posts/' . str_replace('%20', ' ', URL_ANTERIO) . '/' .str_replace('%20', ' ', URL_UTIMA).'.php');
 
-/** functions Pag **/
+define('PATH_SCRIPT', './Scripts/' . str_replace('%20', ' ', URL_ANTERIO) . '/' .str_replace('%20', ' ', URL_UTIMA).'.php');
+
+/** functions Pag **/ 
 //define("TITULO_DOSITE", titleWeb('titleSite'));
 //define("GETBOOTSTRAPCSS", titleWeb('getbootstrapCss'));
 //define("GETBOOTSTRAPJS", titleWeb('getbootstrapjS'));
@@ -41,6 +43,7 @@ define('CRIAR_PAGES', 'Pages/criar.php');
 define('EDITAR_PAGES', 'Pages/editar.php');
 define('SCRIPT_PAGES', 'Pages/script.php');
 define('POST_PAGES', 'Pages/posts.php');
+define('SCRIPT_POST_PAGES', 'Pages/posts-script.php');
 define('LOGIN_PAGES', 'Pages/login.php');
 define('ERROR404', 'Pages/404.php');
 
