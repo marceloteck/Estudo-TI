@@ -7,8 +7,9 @@ function pastasMissa2(){
 		if ($arquivo != '.' && $arquivo != '..'&& $arquivo != 'index.php'){
 			
 			echo '
-            <div class="bg-white py-2 collapse-inner rounded DivConteudo">
+            <div class="bg-white py-2 collapse-inner rounded DivConteudo"><a href="/url-script/pastas?dir='.$arquivo.'">
             <h4 class="collapse-header">'.$arquivo.'</h4>
+			</a>
 			';
 			
 			
@@ -40,6 +41,7 @@ function pastasMissa2(){
 pastasMissa2();
     ?>
     
-            
-           
-       
+<style>
+ a{ outline: none; text-decoration: none;}
+</style>     
+

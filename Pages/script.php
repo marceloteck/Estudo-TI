@@ -38,18 +38,39 @@
                             <!-- itens ocultos para envio de formulario -->
                             <button id="enviarForm1" type="submit"  style="width:100%; display:none;" name="button2" class="btn btn-primary">Enviar</button> 
                             <?php
-                             include PHP_GRAVAR_SCRIPT; 
+                             include PHP_GRAVAR_SCRIPT;
+                            
                             ?>
-                            <input  autocomplete="off" style="display: none;" name="title" value=""  type="text" id="Titulo01" class="form-control" placeholder="Escreva o Link">
-                            <input autocomplete="off" style="display: none;" id="Link01"  value="" name="link"  type="text" class="form-control" placeholder="Link formatado">
+                              <?php /************************************* */
+                            if(isset($_GET['editscript'])){$IptTitle = URL_UTIMA_Format; $IptLink = URL_UTIMA;}else{$IptTitle = ''; $IptLink = '';}
+                            ?>
+                            <input  autocomplete="off" style="display: none;" name="title" value="<?=$IptTitle?>"  type="text" id="Titulo01" class="form-control" placeholder="Escreva o Link">
+                            <input autocomplete="off" style="display: none;" id="Link01"  value="<?=$IptLink?>" name="link"  type="text" class="form-control" placeholder="Link formatado">
                             <input autocomplete="off" style="display: none;" id="selectDiv" name="select"  type="text" class="form-control" placeholder="select">
                             <!-- itens ocultos para envio de formulario -->
+                            <?php
+                            if(isset($_GET['editscript'])){
+                                define('EDITsCRIPTGET', URL_PRINCIPAL.'/'.$_GET['editscript'].'.php');
+
+                                $texHtml = ApiScript(EDITsCRIPTGET, 'html');
+                                $texCss = ApiScript(EDITsCRIPTGET, 'css');
+                                $texJS = ApiScript(EDITsCRIPTGET, 'js');
+
+                                
+                            
+                            }else{
+                                $texHtml = '';
+                                $texCss = '';
+                                $texJS = '';
+                            }
+                           
+                            ?>
 
                              <!--------------------------------------------------->  
                         <div id="cnthtml">
-                            <textarea style="display: none;" id="html" name="html"><!-- HTML  ou PHP --></textarea>
-                            <textarea style="display: none;" id="css" name="css">/* CSS */</textarea>
-                            <textarea style="display: none;" id="js" name="js">// JavaScript & jQuery</textarea>
+                            <textarea style="display: none;" id="html" name="html"><!-- HTML  ou PHP --><?=trim($texHtml)?></textarea>
+                            <textarea style="display: none;" id="css" name="css">/* CSS */<?=trim($texCss)?></textarea>
+                            <textarea style="display: none;" id="js" name="js">/*JavaScript & jQuery*/<?=trim($texJS)?></textarea>
                         </div>
               
                      

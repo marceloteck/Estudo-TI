@@ -9,8 +9,11 @@
                         </div>
                         <div class="card-body">
                             <div id="TEXtPostEdt">
+                                
                             
-                                <?php include PATH_pOST;?>
+                                <?php
+                               
+                                 include PATH_pOST;?>
                             </div>
                             
                         </div>

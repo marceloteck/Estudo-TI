@@ -15,9 +15,20 @@
                     $GetEdit = str_replace('%20',' ',$GetEdit);
                     define('GET_EDIT', $GetEdit);
                 }else{
-                    $GetEdit = '';
-                    define('GET_EDIT', $GetEdit);
+                    define('GET_EDIT', '');
+                } 
+                if(isset($_GET['editscript'])){
+                    $GetEdit = '?editscript='.$_GET['editscript'];
+                    $GetEdit = str_replace('%20',' ',$GetEdit);
+                    define('GET_EDIT2', $GetEdit);
+                }else{
+                    define('GET_EDIT2', '');
                 }  
+
+
+
+
+
             ?>
     //Includes ATIVOS
     window.onload = selectJs();
@@ -27,12 +38,8 @@
         $('#PastaOption0').select2();   
     }
     function selectJsScript(){ 
-        IncludeJS('Assets/html/select_phpScript.php<?=GET_EDIT?>', '#selectAtiveScript');
+        IncludeJS('Assets/html/select_phpScript.php<?=GET_EDIT2?>', '#selectAtiveScript');
         $('#PastaOption0').select2();   
     }
 
-
-    function teste(){ 
-        alert('teste');
-    }
 </script>

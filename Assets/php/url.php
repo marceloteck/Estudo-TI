@@ -98,14 +98,33 @@ function paginasWEb(){
 	$url = explode(URL_PRINCIPAL, $url[0]);
 	$url = explode('&', $url[1]);
 	$url = str_replace('/', '', $url[0]);
-	if(file_exists(PATH_pOST)){
-		return POST_PAGES;
-	}else if(file_exists(PATH_SCRIPT)){
-		return SCRIPT_POST_PAGES;
-		
-	}else{
-		return ERROR404;	
-	}
+	define('URL_paginasWEb', $url);
+
+	if(TIPO_DEURL == "url-script"){
+		if(file_exists(PATH_SCRIPT)){
+			return SCRIPT_POST_PAGES;
+		}else{
+			return ERROR404;	
+		}
+	}else if(TIPO_DEURL == "url"){
+		if(file_exists(PATH_pOST)){
+			return POST_PAGES;
+		}else{
+			return ERROR404;	
+		}
+	}else if(URL_UTIMA == "pastas"){
+			return PASTAS_PAGES;
+		}else{
+			return ERROR404;	
+		}
+	
+
+	
+
+
+	
+
+	
 }
 
 function ExplodeURL($buscaIn, $buscaFn, $N_in, $N_f, $URL)
@@ -135,20 +154,23 @@ function my_file_get_contents( $site_url ){
 	}
 
 	function ApiScript($Url, $tipo){ //tipo: css, js, html, php
-	$Script = my_file_get_contents($Url."?script=true");
+	$Script = my_file_get_contents($Url);
+	if(str_replace('<!-- /**','',$Script)){
+		$Script = explode('<!-- /**', $Script);
+		$Script = $Script[0];
+	  }
+
 	switch ($tipo) {
 		case 'css':
 			$Script = explode('<style>', $Script);
 			$Script = explode('</style>', $Script[1]);
 			$Script = $Script[0];
-			$Script = "<style>" . $Script . "</style>";
 			return $Script;
 			break;
 		case 'js':
 			$Script = explode('<script>', $Script);
 			$Script = explode('</script>', $Script[1]);
 			$Script = $Script[0];
-			$Script = "<script>" . $Script . "</script>";
 			return $Script;
 			break;
 		case 'html':

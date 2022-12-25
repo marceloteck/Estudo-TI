@@ -14,7 +14,13 @@ function pastasMissa(){
 						  <table class="shadow table table-borderless border-top" id="" width="100%" cellspacing="0">			
                                     <thead>
                                         <tr>
-                                            <th><div class="confEdit"><button onclick="ApagarArquvs(\'?DirDel=Scripts/'.$arquivo.'\',\''.$arquivo.'\')" type="button" class="btn btn-circle btn-sm "> <i class="material-icons">&#xe872;</i></button> #</div> <div style="display:none;">'.$arquivo.'</div>  <input  onchange="Renmar(\'#Rname'.$i.'\'),renomPst(\''.$arquivo.'\',this.value)" autocomplete="off" id="Rname'.$i.'"  value="'.$arquivo.'" name="rname'.$i.'"  type="text" class="EditRname" readonly> 
+                                            <th><div class="confEdit">
+											<button onclick="ApagarArquvs(\'?DirDel=Scripts/'.$arquivo.'\',\''.$arquivo.'\')" type="button" class="btn btn-circle btn-sm "> <i class="material-icons">&#xe872;</i></button> #</div> 
+											
+											<div style="display:none;">'.$arquivo.'</div>  
+											
+											<input  onchange="Renmar(\'#Rname'.$i.'\'),renomPst(\''.$arquivo.'\',this.value)" autocomplete="off" id="Rname'.$i.'"  value="'.$arquivo.'" name="rname'.$i.'"  type="text" class="EditRname" readonly> 
+
 											<script>
 												$("#Rname'.$i.'").on(\'dblclick\', function() {
 												$(\'input[name="rname'.$i.'"]\').removeAttr(\'readonly\');
@@ -39,7 +45,7 @@ function pastasMissa(){
                              <td>
 							 <div class="confEdit">
 								<button onclick="ApagarArquvs(\'?arquivo='.$arL.'.php&dir=Scripts/'.$arquivo.'/\',\''.$arf.'\')" type="button" class="btn "> <i class="material-icons">&#xe872;</i></button>
-								<a href="/editar?edit=Scripts/'.$arquivo.'/'.$arL.'">
+								<a href="/script?editscript=Scripts/'.$arquivo.'/'.$arL.'">
 									<button type="button" class="btn "><i class="material-icons">&#xe3c9;</i></button>
 								</a>	
 							 </div> 

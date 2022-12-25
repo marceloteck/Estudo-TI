@@ -4,7 +4,7 @@ if(isset($_POST['title']) or isset($_POST['link'])){
     define('LINK_SCRIPT',$_POST['link']);
     define('HTML_PHP_COD',str_replace('<!-- HTML  ou PHP -->','', $_POST['html']));
     define('CSS_CODE',str_replace('/* CSS */','', $_POST['css']));
-    define('JS_CODE',str_replace('// JavaScript & jQuery','', $_POST['js']));
+    define('JS_CODE',str_replace('/*JavaScript & jQuery*/','', $_POST['js']));
     define('PASTA_SCRIPT',$_POST['select']);
   
     if (HTML_PHP_COD != "") {
@@ -40,7 +40,7 @@ if(isset($_POST['title']) or isset($_POST['link'])){
 
         $pasta = './Scripts/'.PASTA_SCRIPT.'/';
         $arquivo = $pasta.LINK_SCRIPT.'.php';
-        $Linknv = URL_PRINCIPAL . "/editar?editscript=Scripts"."/" . PASTA_SCRIPT . "/".LINK_SCRIPT;
+        $Linknv = URL_PRINCIPAL . "/script?editscript=Scripts"."/" . PASTA_SCRIPT . "/".LINK_SCRIPT;
         $fp = fopen($arquivo, "w+");
         $InfoEscrita = '<!-- /** --TITULO--:' . TITULO_SCRIPT .'| --LINK--:' . $arquivo .'| **/ -->';
         if(str_replace('<!-- /**','',EDITOR_SCRIPT)){
@@ -59,7 +59,7 @@ if(isset($_POST['title']) or isset($_POST['link'])){
               <div class="modal-content">
                 <div class="modal-header">
                   <h1 class="fs-5" id=""><i class="fas fa-exclamation-triangle"></i> Aviso</h1>
-                  <button onclick="hideNone(\'#MODALdiv\')" type="button" class="btn-close"></button>
+                  <button onclick="hideNone(\'#MODALdiv\'),RedirectUrl(\''.$Linknv.'\')" type="button" class="btn-close"></button>
                 </div>
                 <div class="modal-body">
                  <div id="AvsAlert1"><i class="fas fa-info-circle"></i> Arquivo enviado com <strong>Sucesso!</strong> 
@@ -68,7 +68,7 @@ if(isset($_POST['title']) or isset($_POST['link'])){
                  </div>
                  </div>
                 <div class="modal-footer">
-                  <button onclick="hideNone(\'#MODALdiv\')" type="button" class="btn btn-secondary">Fechar</button>
+                  <button onclick="hideNone(\'#MODALdiv\'),RedirectUrl(\''.$Linknv.'\')" type="button" class="btn btn-secondary">Fechar</button>
                   
                 </div>
               </div>

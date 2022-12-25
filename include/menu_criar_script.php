@@ -16,7 +16,9 @@
             <form action="#" class="container-fluid" >
             <button onclick="clikButton('enviarForm1')" type="button"  style="width:100%;" name="click1" class="btn btn-primary">
             <?php /************************************* */
-            if(EXPLODE_SELECAO == "editar"){ echo "Salvar"; }else{ echo "Criar";}
+            //if(EXPLODE_SELECAO == "editar"){ echo "Salvar"; }else{ echo "Criar";}
+            if (isset($_GET['editscript'])) { echo "Salvar"; }else{ echo "Criar";}
+
             ?>
             </button>
             <br> <br>
@@ -41,7 +43,7 @@
                 <div id="selectAtiveScript"></div>
                 <br />
                 <?php /************************************* */
-                  if(isset($_GET['edit'])){$IptTitle = URL_UTIMA_Format; $IptLink = URL_UTIMA;}else{$IptTitle = ''; $IptLink = '';}
+                  if(isset($_GET['editscript'])){$IptTitle = URL_UTIMA_Format; $IptLink = URL_UTIMA;}else{$IptTitle = ''; $IptLink = '';}
                  ?>
                 <input  onblur="widthDiv('#collapseCriar', ''),gravarScript()" onfocus="widthDiv('#collapseCriar', '400px')"  autocomplete="off" onkeyup="titleLink('#title1','#Link1'),CopiarText('#title1', '#Titulo01'),titleLink('#title1', '#Link01'),SelectValue('PastaOption0', 'selectDiv')" value="<?=$IptTitle?>"  type="text" id="title1" class="form-control" placeholder="Escreva o Link">
                 <br />
