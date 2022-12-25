@@ -1,5 +1,6 @@
 .DivConteudo a{
     overflow: auto;
+    border-radius: 3px !important;
 }
 
 .DivConteudo a::-webkit-scrollbar { 

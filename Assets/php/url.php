@@ -186,4 +186,9 @@ function my_file_get_contents( $site_url ){
 	}
 	}
 
+	function barPesquisa(){
+		
+	}
+
+
 ?>

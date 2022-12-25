@@ -1,7 +1,6 @@
 <!-- Topbar -->
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-                
 <!-- Sidebar Toggle (Topbar) -->
 <form action="#" class="form-inline">
     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -10,20 +9,32 @@
 </form>
 
 
-
 <!-- Topbar Search -->
 <form
     class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
     <div class="input-group">
-        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+
+        <input onblur=" blrNone()" onfocus="BlockBsc('#pesquisabar', 'block')"  onkeydown="pesquisaBar()" id="BscBar" type="text" class="form-control bg-light border-0  rounded" placeholder="Pesquisar..."
             aria-label="Search" aria-describedby="basic-addon2">
         <div class="input-group-append">
-            <button class="btn btn-primary" type="button">
+            
+            <!--<button class="btn btn-primary" type="button">
                 <i class="fas fa-search fa-sm"></i>
-            </button>
+            </button>-->
+<!--pesquisa div -->
+<div style="display: none;" id="pesquisabar" class="pesquisabar shadow">
+<label id="dgt">Digite para pesquisar...</label>
+    <?php
+    include "Pages/pesquisaSit.php";
+    ?>
+</div>
+<!--pesquisa div -->
         </div>
     </div>
 </form>
+
+
+
 
 <!-- Topbar Navbar -->
 <ul class="navbar-nav ml-auto">
@@ -52,14 +63,14 @@
         </div>
     </li>
 
-    <!-- Nav Item - Alerts -->
+    <!-- Nav Item - Alerts
     <li class="nav-item dropdown no-arrow mx-1">
         <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-bell fa-fw"></i>
-            <!-- Counter - Alerts -->
+            !-- Counter - Alerts --
             <span class="badge badge-danger badge-counter">3+</span>
-        </a>
+        </a> -->
         <!-- Dropdown - Alerts -->
         <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
             aria-labelledby="alertsDropdown">
@@ -160,3 +171,76 @@
             </div>
         </div>
     </div>
+    
+<style>
+    .pesquisabar{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        min-height: 50px;
+        max-height: 90vh;
+        overflow: auto;
+        background-color: #fff;
+        border: 0.5px solid #ccc;
+        z-index: 999999999999999999999;
+        left: 0px;
+        top: 0px;
+        margin-top: 40px;
+        border-radius: 5px;
+
+    }
+    .listBusc a{
+  text-decoration: none;
+  list-style: none;
+  width: 100%;
+  padding: 5px 5px 5px 15px;
+  float: left;
+  cursor: pointer;
+  color: #000;
+  border-bottom:1px solid #fafafa;
+}
+.listBusc a i{
+    font-size: 1rem;
+}
+.listBusc a:hover{
+    background-color: darkgrey;
+    color: #fff;
+}
+</style>
+
+<script type="text/javascript">
+function BlockBsc(divMs, displayDiv){
+  var div01 = document.querySelector(divMs);
+  var status = div01.style.display;
+    div01.style.display = displayDiv;
+} 
+
+function blrNone(){
+    if(!document.getElementById('BscBar').value){
+        BlockBsc('#pesquisabar', 'none')
+    }
+}
+
+
+    //" onblur="MostraOcultar('#pesquisabar', 'block'),hidepsq()" 
+    window.onload = hidepsq();
+    function hidepsq(){
+        $('psq').hide();
+        $('#dgt').show();
+    }
+    
+        function pesquisaBar(){
+        var buscarPOr = "psq";
+        var Onde = "#listBuscID";
+        var IDBuscador = "#BscBar";
+				$(buscarPOr).hide();
+				$('#dgt').hide();
+				var txt = $(IDBuscador).val();
+				$(buscarPOr).each(function(){
+				   if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+					   $(this).show();
+				   }
+				});
+           
+}
+            </script>
