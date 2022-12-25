@@ -39,7 +39,7 @@ function pastasMissa(){
 									<button type="button" class="btn "><i class="material-icons">&#xe3c9;</i></button>
 								</a>	
 							 </div> 
-							 <div class="tdTAb"><a  class="" href="/url/'.$arquivo.'/'.$arL.'/">'.$arf.'</a></div>
+							 <div class="tdTAb"><a  class="" href="/url/'.$arquivo.'/'.$arL.'">'.$arf.'</a></div>
 							 </td>							 
 							</tr>
                             ';		

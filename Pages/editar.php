@@ -43,5 +43,13 @@
             </div>
             <!-- End of Main Content -->
             
+            <style>
+                blockquote{
+                border-left: 5px solid #4e73df;
+                padding: 15px;
+                background-color: aliceblue;
+                font-size: 1.5rem;
+                }
+            </style>
     
       

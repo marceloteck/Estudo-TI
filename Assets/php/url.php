@@ -117,14 +117,6 @@ function paginasWEb(){
 		}else{
 			return ERROR404;	
 		}
-	
-
-	
-
-
-	
-
-	
 }
 
 function ExplodeURL($buscaIn, $buscaFn, $N_in, $N_f, $URL)
@@ -162,20 +154,24 @@ function my_file_get_contents( $site_url ){
 
 	switch ($tipo) {
 		case 'css':
-			$Script = explode('<style>', $Script);
-			$Script = explode('</style>', $Script[1]);
+			$Script = explode('<!--startCss-->', $Script);
+			$Script = explode('<!--endCss-->', $Script[1]);
 			$Script = $Script[0];
+			$Script = str_replace('<style>', '', $Script);
+			$Script = str_replace('</style>', '', $Script);
 			return $Script;
 			break;
 		case 'js':
-			$Script = explode('<script>', $Script);
-			$Script = explode('</script>', $Script[1]);
+			$Script = explode('<!--startJs-->', $Script);
+			$Script = explode('<!--endJs-->', $Script[1]);
 			$Script = $Script[0];
+			$Script = str_replace('<script>', '', $Script);
+			$Script = str_replace('</script>', '', $Script);
 			return $Script;
 			break;
 		case 'html':
-			$Script = explode('</style>', $Script);
-			$Script = explode('<script>', $Script[1]);
+			$Script = explode('<!--starthtml-->', $Script);
+			$Script = explode('<!--endhtml-->', $Script[1]);
 			$Script = $Script[0];
 			return $Script;
 			break;

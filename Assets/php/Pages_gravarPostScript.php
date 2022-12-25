@@ -8,17 +8,17 @@ if(isset($_POST['title']) or isset($_POST['link'])){
     define('PASTA_SCRIPT',$_POST['select']);
   
     if (HTML_PHP_COD != "") {
-      define('HTML_SCRIPT', HTML_PHP_COD);
+      define('HTML_SCRIPT', '<!--starthtml--> '.HTML_PHP_COD.' <!--endhtml-->');
     }else{
       define('HTML_SCRIPT', '');
     }
     if(JS_CODE != ""){
-    define('JS_SCRIPT', '<script> '.JS_CODE.' </script>');    
+    define('JS_SCRIPT', '<!--startJs--> <script> '.JS_CODE.' </script> <!--endJs-->');    
     }else{
       define('JS_SCRIPT', ''); 
     }
     if(CSS_CODE != ""){
-      define('CSS_SCRIPT', '<style> '.CSS_CODE.' </style>');    
+      define('CSS_SCRIPT', '<!--startCss--> <style> '.CSS_CODE.' </style> <!--endCss-->');    
       }else{
         define('CSS_SCRIPT', ''); 
       }

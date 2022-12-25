@@ -21,6 +21,8 @@
                            
 
                             <div id="controls">
+                            <a href="/script"  class="bnt" style="color: rgb(37, 81, 131);"><i class="material-icons">add_box</i></a>
+
                                 <a onclick="expandirDiv('#MstrarDiv')" class="bnt lights"><i class="material-icons">&#xe31f;</i></a>
                                 
                                 
