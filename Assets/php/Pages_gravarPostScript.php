@@ -7,14 +7,20 @@
     define('JS_CODE',str_replace('/*JavaScript & jQuery/','', $_POST['js']));
     define('PASTA_SCRIPT',$_POST['select']);
   */
-  define('TITULO_SCRIPT',POST('title'));
-  define('LINK_SCRIPT',POST('link'));
-  define('HTML_PHP_COD',str_replace('<!-- HTML  ou PHP -->','',POST('html')));
-  define('CSS_CODE',str_replace('/* CSS */','', POST('css')));
-  define('JS_CODE',str_replace('/*JavaScript & jQuery*/','', POST('js')));
-  define('PASTA_SCRIPT', POST('select'));
 
-    if(POST_TRUE('title') or POST_TRUE('link')){
+
+   // if(POST_TRUE('title') or POST_TRUE('link')){
+    if(isset($_POST['title']) or isset($_POST['link'])){
+      define('TITULO_SCRIPT',POST('title'));
+      define('LINK_SCRIPT',POST('link'));
+      define('HTML_PHP_COD',str_replace('<!-- HTML  ou PHP -->','',POST('html')));
+      define('CSS_CODE',str_replace('/* CSS */','', POST('css')));
+      define('JS_CODE',str_replace('/*JavaScript & jQuery*/','', POST('js')));
+      define('PASTA_SCRIPT', POST('select'));
+    
+
+
+
 
     if (HTML_PHP_COD != "") {
       define('HTML_SCRIPT', '<!--starthtml--> '.HTML_PHP_COD.' <!--endhtml-->');
@@ -107,7 +113,7 @@
            }
         fclose($fp);
     }
-    if(POST_TRUE('link')){
+    if(LINK_SCRIPT != "" && isset($_POST['link'])){
         CriarArquivo();
     }else{
         echo '<div style="display: block;" class="modal fade show" id="MODALdiv" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"  >
