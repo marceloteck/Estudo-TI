@@ -1,4 +1,8 @@
 <!--starthtml--> //php
+function link_A($link, $title,$htmlLink){
+    echo "<psq><a $htmlLink href='$link'>$title</a></psq>";	
+}
+
 function PstPesquisa($pasta,$urldir){
 	$path = $pasta;
 		$diretorio = dir($path);
@@ -33,8 +37,10 @@ function PstPesquisa($pasta,$urldir){
 		$diretorio -> close();	
 	}
    
-    ?>
+ 
 <div class="listBusc" id="listBuscID">
-        <?=PstPesquisa("./Posts/","/url")?>
-        <?=PstPesquisa("./Scripts/","/url-script")?>
-</div> <!--endhtml--><!-- /** --TITULO--:Pesquisar em diretorio php| --LINK--:./Scripts/php/pesquisar-em-diretorio-php.php| **/ -->
+  <?//PstPesquisa("./Posts/","/url")?>
+  <?//PstPesquisa("./Scripts/","/url-script")?>
+</div>
+  
+       <!--endhtml--><!-- /** --TITULO--:pesquisar em diretorio php| --LINK--:./Scripts/php/pesquisar-em-diretorio-php.php| **/ -->

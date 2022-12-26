@@ -1,5 +1,5 @@
 <?php
-/** functions url.php **/
+// functions url.php 
 define("URL_PRINCIPAL", Url('host'));
 define("URL_PAGINAS", Url('uri'));
 define("URL_COMPLETA", Url('UrlAtual'));
@@ -14,7 +14,7 @@ define('PATH_pOST', './Posts/' . str_replace('%20', ' ', URL_ANTERIO) . '/' .str
 
 define('PATH_SCRIPT', './Scripts/' . str_replace('%20', ' ', URL_ANTERIO) . '/' .str_replace('%20', ' ', URL_UTIMA).'.php');
 
-/** functions Pag **/ 
+// functions Pag 
 //define("TITULO_DOSITE", titleWeb('titleSite'));
 //define("GETBOOTSTRAPCSS", titleWeb('getbootstrapCss'));
 //define("GETBOOTSTRAPJS", titleWeb('getbootstrapjS'));

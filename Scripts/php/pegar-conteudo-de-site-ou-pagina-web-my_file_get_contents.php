@@ -10,4 +10,4 @@ function my_file_get_contents( $site_url ){
 	$file_contents = ob_get_contents();
 	ob_end_clean();
 	return $file_contents;
-	} <!--endhtml--><!-- /** --TITULO--:pegar conteudo de site ou página web| --LINK--:./Scripts/php/pegar-conteudo-de-site-ou-pagina-web.php| **/ -->
+	} <!--endhtml--><!-- /** --TITULO--:pegar conteudo de site ou pagina web my_file_get_contents| --LINK--:./Scripts/php/pegar-conteudo-de-site-ou-pagina-web-my_file_get_contents.php| **/ -->

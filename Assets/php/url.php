@@ -11,13 +11,13 @@ function Url($valor){
 	}	
 	switch ($valor) {
 		case 'host':
-			return $serverhttp.$_SERVER[HTTP_HOST];
+			return $serverhttp.$_SERVER['HTTP_HOST'];
 			break;
 		case 'uri':
-			return $_SERVER[REQUEST_URI];
+			return $_SERVER['REQUEST_URI'];
 			break;
 		case 'UrlAtual':
-			return $serverhttp.$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI];
+			return $serverhttp.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 			break;
 		
 	}
@@ -181,10 +181,30 @@ function my_file_get_contents( $site_url ){
         
 	}
 	}
-
-	function barPesquisa(){
-		
+	function GET($value){
+		if(isset($_GET[$value])){
+			return $_GET[$value];
+		}   
 	}
-
+	function POST($value){
+		if(isset($_POST[$value])){
+			return $_POST[$value];
+		}   
+	}
+	
+	function GET_TRUE($value){
+		if(isset($_GET[$value]) and $_GET[$value] != ""){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	function POST_TRUE($value){
+		if(isset($_POST[$value]) and $_POST[$value] != ""){
+			return true;
+		}else{
+			return false;
+		}
+	}
 
 ?>
