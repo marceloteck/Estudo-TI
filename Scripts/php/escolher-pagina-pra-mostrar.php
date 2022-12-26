@@ -1,4 +1,5 @@
 <!--starthtml--> //php
+//usar o DEFINE do estudos .ns
 function PagAtualLink($valor){
     switch ($valor) {
 		case 'inicio':
@@ -43,5 +44,4 @@ function paginasWEb(){
 		}else{
 			return ERROR404;	
 		}
-}
- <!--endhtml--><!-- /** --TITULO--:escolher pagina pra mostrar| --LINK--:./Scripts/php/escolher-pagina-pra-mostrar.php| **/ -->
+} <!--endhtml--><!-- /** --TITULO--:escolher pagina pra mostrar| --LINK--:./Scripts/php/escolher-pagina-pra-mostrar.php| **/ -->

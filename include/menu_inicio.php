@@ -25,7 +25,7 @@
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#TogleScrpt"
         aria-expanded="true" aria-controls="TogleScrpt">
         <i class="fas fa-fw fa-bars"></i>
-        <span>Cógigos Fontes</span>
+        <span>Código Fonte</span>
     </a>
     <!-- colocar o show para mostrar -->
     <div id="TogleScrpt" class="collapse  tooltip-demo" aria-labelledby="headingTree" data-parent="#accordionSidebar">

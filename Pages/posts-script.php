@@ -18,12 +18,18 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Código Fonte</h6>
+                            <span class="m-0 font-weight-bold text-primary" style="float: left;">Código Fonte</span>
                             <?php
                             $linkpag = str_replace('./','/',PATH_SCRIPT);
+                            $LnkEdit= str_replace('./','',PATH_SCRIPT);
+                            $LnkEdit= str_replace('.php','',$LnkEdit);
                             ?>
 
-                            link: <a target="_blank" href="<?=$linkpag?>"><?=URL_UTIMA?>.php</a>
+    <div style="float: right; margin-left: 15px;"> link: <a target="_blank" href="<?=$linkpag?>"><?=URL_UTIMA?>.php</a></div>
+
+                            <div style="float: right; ">
+                              <a href="/script?editscript=<?=$LnkEdit?>"><button class="btn btn-danger">Editar</button></a>
+                            </div>
                         </div>
                         <div class="card-body">
                             <div id="TEXtPostEdt">

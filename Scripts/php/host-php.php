@@ -1,6 +1,4 @@
-<!--starthtml--> 
-
-//código php
+<!--starthtml--> //código php
 function Url($valor){
 	if (empty($_SERVER['HTTPS'])){
 		$serverhttp = "http://";
@@ -19,4 +17,7 @@ function Url($valor){
 			break;
 		
 	}
-} <!--endhtml--><!-- /** --TITULO--:host php| --LINK--:./Scripts/php/host-php.php| **/ -->
+}
+define("URL_PRINCIPAL", Url('host'));
+define("URL_PAGINAS", Url('uri'));
+define("URL_COMPLETA", Url('UrlAtual')); <!--endhtml--><!-- /** --TITULO--:host php| --LINK--:./Scripts/php/host-php.php| **/ -->

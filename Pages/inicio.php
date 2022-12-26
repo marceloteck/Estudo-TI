@@ -1,22 +1,14 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+                   <div style=" position: absolute; align-items: center; display: flex; width:80vw; height:80vh;justify-content: center; color: aliceblue; font-size: 3rem;">
+                   <div>
+                   ESTUDOS<sup>.ns</sup>
+                   </div>
+                </div> 
+<img src="Assets/img/login_bg.jpg" alt="" style="width: 100%;" >
 
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Centro de Leitura</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <h1>Escolha no Menu o que deseja estudar</h1>
-
-                     
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+    </div>
                 <!-- /.container-fluid -->
 
             </div>
