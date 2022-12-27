@@ -2,7 +2,8 @@
 include '../php/functions.php'; 
 include '../php/url.php';
 include '../php/define.php';
-if(isset($_GET['editscript'])){
+//if(isset($_GET['editscript'])){
+if(GET_TRUE('editscript')){
   $optionVals = '<option value="'.URL_ANTERIO.'" selected>'.URL_ANTERIO.' (ATUAL)</option>';
 }else{
   $optionVals = '';
