@@ -46,7 +46,7 @@
                               <?php /************************************* */
                             if(isset($_GET['editscript'])){$IptTitle = URL_UTIMA_Format; $IptLink = URL_UTIMA;}else{$IptTitle = ''; $IptLink = '';}
                             ?>
-                            <input  autocomplete="off" style="display: none;" name="title" value="<?=$IptTitle?>"  type="text" id="Titulo01" class="form-control" placeholder="Escreva o Link">
+                            <input  required autocomplete="off" style="display: none;" name="title" value="<?=$IptTitle?>"  type="text" id="Titulo01" class="form-control" placeholder="Escreva o Link">
                             <input autocomplete="off" style="display: none;" id="Link01"  value="<?=$IptLink?>" name="link"  type="text" class="form-control" placeholder="Link formatado">
                             <input autocomplete="off" style="display: none;" id="selectDiv" name="select"  type="text" class="form-control" placeholder="select">
                             <!-- itens ocultos para envio de formulario -->

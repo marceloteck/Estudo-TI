@@ -16,7 +16,7 @@
 					$arL = str_replace(".php", "", $ar);
 					$arf = str_replace("-", " ", $arL);
 					$arf = ucfirst($arf);
-							echo  $arf.$PastaLocal;		
+							echo  $path1.$arf;		
 					}
 				}			
 			$dirr -> close();

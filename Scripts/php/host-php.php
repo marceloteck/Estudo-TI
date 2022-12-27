@@ -1,5 +1,5 @@
 <!--starthtml--> //código php
-function Url($valor){
+ function Url($valor){
 	if (empty($_SERVER['HTTPS'])){
 		$serverhttp = "http://";
 	  }else{
@@ -7,13 +7,13 @@ function Url($valor){
 	}	
 	switch ($valor) {
 		case 'host':
-			return $serverhttp.$_SERVER[HTTP_HOST];
+			return $serverhttp.$_SERVER['HTTP_HOST'];
 			break;
 		case 'uri':
-			return $_SERVER[REQUEST_URI];
+			return $_SERVER['REQUEST_URI'];
 			break;
 		case 'UrlAtual':
-			return $serverhttp.$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI];
+			return $serverhttp.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 			break;
 		
 	}

@@ -193,14 +193,14 @@ function my_file_get_contents( $site_url ){
 	}
 	
 	function GET_TRUE($value){
-		if(isset($_GET[$value]) and $_GET[$value] != ""){
+		if(isset($_GET[$value]) or $_GET[$value] != ""){
 			return true;
 		}else{
 			return false;
 		}
 	}
 	function POST_TRUE($value){
-		if(isset($_POST[$value]) and $_POST[$value] != ""){
+		if(isset($_POST[$value]) or $_POST[$value] != ""){
 			return true;
 		}else{
 			return false;

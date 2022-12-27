@@ -12,17 +12,25 @@ function POST($value){
 }
 
 // se existir mostra verdadeiro, ou se não mostra falso
-function GET_TRUE($value){
-    if(isset($_GET[$value]) and $_GET[$value] != ""){
-        return true;
-    }else{
-        return false;
+    function GET_TRUE($value){
+        if(isset($_GET[$value])){
+            if ($_GET[$value] != "") {
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
     }
-}
-function POST_TRUE($value){
-    if(isset($_POST[$value]) and $_POST[$value] != ""){
-        return true;
-    }else{
-        return false;
-    }
-} <!--endhtml--><!-- /** --TITULO--:get e post receber valor ou mostra verdadeiro ou falso| --LINK--:./Scripts/php/get-e-post-receber-valor-ou-mostra-verdadeiro-ou-falso.php| **/ -->
+    function POST_TRUE($value){
+        if(isset($_POST[$value])){
+            if ($_POST[$value] != "") {
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+    } <!--endhtml--><!-- /** --TITULO--:get e post receber valor ou mostra verdadeiro ou falso| --LINK--:./Scripts/php/get-e-post-receber-valor-ou-mostra-verdadeiro-ou-falso.php| **/ -->

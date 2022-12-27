@@ -10,4 +10,9 @@
         }
       }
 
-} <!--endhtml--><!-- /** --TITULO--:renomear aquivo com php| --LINK--:./Scripts/php/renomear-aquivo-com-php.php| **/ -->
+}
+
+//RenomeArquv(NOVO_NOME.PHP, ANTIGO_NOME.PHP, ./DIR/PASTAlOCAL/)
+   if(GET_TRUE('edit')){
+            RenomeArquv(LINK.'.php', GET('edit').'.php', DIR.PASTA.'/');
+        } <!--endhtml--><!-- /** --TITULO--:renomear aquivo com php| --LINK--:./Scripts/php/renomear-aquivo-com-php.php| **/ -->

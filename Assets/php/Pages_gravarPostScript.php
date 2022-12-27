@@ -6,23 +6,9 @@
     define('CSS_CODE',str_replace('/* CSS /','', $_POST['css']));
     define('JS_CODE',str_replace('/*JavaScript & jQuery/','', $_POST['js']));
     define('PASTA_SCRIPT',$_POST['select']);
-  */
-
-
-   // if(POST_TRUE('title') or POST_TRUE('link')){
-    if(isset($_POST['title']) or isset($_POST['link'])){
-      define('TITULO_SCRIPT',POST('title'));
-      define('LINK_SCRIPT',POST('link'));
-      define('HTML_PHP_COD',str_replace('<!-- HTML  ou PHP -->','',POST('html')));
-      define('CSS_CODE',str_replace('/* CSS */','', POST('css')));
-      define('JS_CODE',str_replace('/*JavaScript & jQuery*/','', POST('js')));
-      define('PASTA_SCRIPT', POST('select'));
     
-
-
-
-
-    if (HTML_PHP_COD != "") {
+    //codigo abaixo 
+    /*if (HTML_PHP_COD != "") {
       define('HTML_SCRIPT', '<!--starthtml--> '.HTML_PHP_COD.' <!--endhtml-->');
     }else{
       define('HTML_SCRIPT', '');
@@ -37,6 +23,30 @@
       }else{
         define('CSS_SCRIPT', ''); 
       }
+*/
+ 
+
+
+      if(POST_TRUE('title') or POST_TRUE('link')){
+      define('TITULO_SCRIPT',POST('title'));
+      define('LINK_SCRIPT',POST('link'));
+      define('HTML_PHP_COD',str_replace('<!-- HTML  ou PHP -->','',POST('html')));
+      define('CSS_CODE',str_replace('/* CSS */','', POST('css')));
+      define('JS_CODE',str_replace('/*JavaScript & jQuery*/','', POST('js')));
+      define('PASTA_SCRIPT', POST('select'));
+    
+        function BuscaPorDefine($defineDfLocal, $NvDefine, $InTagBusc, $FnTagBusc){
+          if ($defineDfLocal != "") {
+            define($NvDefine, $InTagBusc.$defineDfLocal.$FnTagBusc);
+          }else{
+            define($NvDefine, '');
+          }
+        }
+
+        BuscaPorDefine(HTML_PHP_COD, 'HTML_SCRIPT', '<!--starthtml--> ', ' <!--endhtml-->');
+        BuscaPorDefine(JS_CODE, 'JS_SCRIPT', '<!--startJs-->  <script> ', ' </script> <!--endJs-->');
+        BuscaPorDefine(CSS_CODE, 'CSS_SCRIPT', '<!--startCss--> <style> ', ' </style> <!--endCss-->');
+
 
     define('EDITOR_SCRIPT', CSS_SCRIPT.HTML_SCRIPT.JS_SCRIPT);
     function CriarArquivo(){
