@@ -1,0 +1,2 @@
+<!--starthtml--> error_reporting(0);
+error_reporting(E_ALL & ~E_NOTICE & E_STRICT); <!--endhtml--><!-- /** --TITULO--:esconder e ocultar erros no php| --LINK--:./Scripts/php/esconder-e-ocultar-erros-no-php.php| **/ -->

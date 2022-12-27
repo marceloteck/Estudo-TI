@@ -70,12 +70,12 @@
 
                              <!--------------------------------------------------->  
                         <div id="cnthtml">
+                            
                             <textarea style="display: none;" id="html" name="html"><!-- HTML  ou PHP --><?=trim($texHtml)?></textarea>
                             <textarea style="display: none;" id="css" name="css">/* CSS */<?=trim($texCss)?></textarea>
                             <textarea style="display: none;" id="js" name="js">/*JavaScript & jQuery*/<?=trim($texJS)?></textarea>
                         </div>
-              
-                     
+        
                            
 
                           <!--  <div id="frame" class="cm-s-default frame">

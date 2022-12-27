@@ -69,7 +69,7 @@ window.CodeMirror = (function() {
     themeChanged(this);
     if (options.lineWrapping)
       this.display.wrapper.className += " CodeMirror-wrap";
-
+      
     var doc = options.value;
     if (typeof doc == "string") doc = new Doc(options.value, options.mode);
     operation(this, attachDoc)(this, doc);
