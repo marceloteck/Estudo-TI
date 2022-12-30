@@ -41,8 +41,9 @@
                                     </tfoot>
                                     <tbody>
                                     <?php 
-			                     DiretoryPasts('./Scripts'); 
-                                ?>
+			                        DiretoryPasts('./Scripts','url-script'); 
+			                        DiretoryPasts('./Posts','url'); 
+                                    ?>
                                     </tbody>
                                     </table>
                                 </div>
@@ -56,7 +57,7 @@
 
 <?php
 
- function DiretoryPasts($Pastas){
+ function DiretoryPasts($Pastas,$url){
 	$path = $Pastas;
 		$diretorio = dir($path);
 	
@@ -74,7 +75,7 @@
 						//echo  $path1.$arf;	
                         echo '
                             <tr>
-                            <td><a class="collapse-item" href="/'.URL_ANTERIO.'/'.$arquivo.'/'.$arL.'">'.$arf.'</a></td>
+                            <td><a class="collapse-item" href="/'.$url.'/'.$PastaLocal.'/'.$arL.'">'.$arf.'</a></td>
                         </tr>
                     ';			
 					}
@@ -90,24 +91,6 @@
 		$diretorio -> close();	
 	}     
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 </div>
                 <!-- /.container-fluid -->
 
