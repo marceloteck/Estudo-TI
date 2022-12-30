@@ -52,7 +52,7 @@ $arquivo = $_GET['dir'];
 					$arf = ucfirst($arf);
 							echo '
                             <tr>
-                            <td><a class="collapse-item" href="/url-script/'.$arquivo.'/'.$arL.'">'.$arf.'</a></td>
+                            <td><a class="collapse-item" href="/'.URL_ANTERIO.'/'.$arquivo.'/'.$arL.'">'.$arf.'</a></td>
                         </tr>
                     ';		
 					}
