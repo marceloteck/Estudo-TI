@@ -20,6 +20,13 @@
         <span>Inicio</span></a>
 </li>
 
+<!-- Nav Item - Dashboard -->
+<li class="nav-item">
+    <a target="_bank" class="nav-link" href="/pages/Cod_script/">
+        <i class="fas fa-fw fa-code"></i>
+        <span>Códigos & Scripts</span></a>
+</li>
+
 <!-- Divider -->
 <hr class="sidebar-divider">
 
