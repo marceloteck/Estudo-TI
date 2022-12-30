@@ -4,13 +4,13 @@
 
                             <?php
 
-function DirPastasLc(){
-    if(URL_ANTERIO == "url-script"){
+function DirPastasLc($urlLocal, $GETdIR){
+    if($urlLocal == "url-script"){
         $path = "./Scripts/";
-    }else if(URL_ANTERIO == "url"){
+    }else if($urlLocal == "url"){
         $path = "./Posts/";
     }
-$arquivo = $_GET['dir'];
+$arquivo = $GETdIR;
 	
 		$diretorio = dir($path);
 			
@@ -69,29 +69,8 @@ $arquivo = $_GET['dir'];
 </div>';
 			
 	}
-    DirPastasLc();
+    DirPastasLc(URL_ANTERIO, $_GET['dir']);
     ?>
-                     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 </div>
                 <!-- /.container-fluid -->
 

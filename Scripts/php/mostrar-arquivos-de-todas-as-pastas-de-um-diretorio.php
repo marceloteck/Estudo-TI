@@ -5,9 +5,6 @@
 		while($PastaLocal = $diretorio -> read()){
 		if ($PastaLocal != '.' && $PastaLocal != '..'&& $PastaLocal != 'index.php'){
             $path1 = $path.'/'.$PastaLocal;
-
-			echo $PastaLocal.'<br>'.$path1.'<br>'; //*** */
-
 			$empty = ((count(glob("$path1/*")) === 0) ? true : false);
 			if(!$empty){
 				$dirr = dir($path1);
@@ -16,7 +13,12 @@
 					$arL = str_replace(".php", "", $ar);
 					$arf = str_replace("-", " ", $arL);
 					$arf = ucfirst($arf);
-							echo  $path1.$arf;		
+						//echo  $path1.$arf;	
+                        echo '
+                            <tr>
+                            <td><a class="collapse-item" href="/'.URL_ANTERIO.'/'.$arquivo.'/'.$arL.'">'.$arf.'</a></td>
+                        </tr>
+                    ';			
 					}
 				}			
 			$dirr -> close();
@@ -28,5 +30,4 @@
 		}
 		}
 		$diretorio -> close();	
-	}
-    DiretoryPasts('./Scripts');    <!--endhtml--><!-- /** --TITULO--:mostrar pastas e diretorios e arquivos php| --LINK--:./Scripts/php/mostrar-pastas-e-diretorios-e-arquivos-php.php| **/ -->
+	}  <!--endhtml--><!-- /** --TITULO--:mostrar arquivos de todas as pastas de um diretorio| --LINK--:./Scripts/php/mostrar-arquivos-de-todas-as-pastas-de-um-diretorio.php| **/ -->
