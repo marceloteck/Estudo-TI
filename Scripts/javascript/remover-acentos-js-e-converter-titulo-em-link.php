@@ -1,4 +1,4 @@
-<!--startJs--> <script> function removerAcentos(s) {
+<!--startJs-->  <script> function removerAcentos(s) {
   return s.normalize('NFD')
   .replace(/[\u0300-\u036f]/g, "")
   .toLowerCase()
@@ -11,4 +11,4 @@ function ConverterTitleInLink(title, link){
   titleweb = removerAcentos(titleweb);
   var linkweb = document.querySelector(link);
   linkweb.value = titleweb;
-} </script> <!--endJs--><!-- /** --TITULO--:remover acentos js e converter link em titulo| --LINK--:./Scripts/javascript/remover-acentos-js-e-converter-link-em-titulo.php| **/ -->
+} </script> <!--endJs--><!-- /** --TITULO--:remover acentos js e converter titulo em link| --LINK--:./Scripts/javascript/remover-acentos-js-e-converter-titulo-em-link.php| **/ -->
